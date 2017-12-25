@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="M_KioskOwner_Radius_Connection" conflictDetection="overwriteChanges" label="M Kiosk Owner Radius Connection" plugIn="VSM.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"M_KioskOwner_Radius_Connection"."Connection_ID" "Connection_ID"
+	,"M_KioskOwner_Radius_Connection"."KioskOwner_ID" "KioskOwner_ID"
+	,"KioskOwner_"."KioskOwner_Code" "KioskOwner_KioskOwner_Code"
+	,"M_KioskOwner_Radius_Connection"."RadiusServer_Code" "RadiusServer_Code"
+	,"RadiusServer_Interface_"."CreatedBy" "RadiusServer_Interface_CreatedBy"
+	,"RadiusServer_Interface_Interface_"."Interface_Name" "RadiusServer_Interface_Interface_Interface_Name"
+	,"RadiusServer_Interface_RadiusServer_"."RadiusServer_Name" "RadiusServer_Interface_RadiusServer_RadiusServer_Name"
+	,"M_KioskOwner_Radius_Connection"."Interface_Code" "Interface_Code"
+	,"M_KioskOwner_Radius_Connection"."Connection_IP_URL" "Connection_IP_URL"
+	,"M_KioskOwner_Radius_Connection"."Connection_Database" "Connection_Database"
+	,"M_KioskOwner_Radius_Connection"."Connection_Username" "Connection_Username"
+	,"M_KioskOwner_Radius_Connection"."Connection_Password" "Connection_Password"
+	,"M_KioskOwner_Radius_Connection"."Item_Flag" "Item_Flag"
+	,"M_KioskOwner_Radius_Connection"."CreatedBy" "CreatedBy"
+	,"M_KioskOwner_Radius_Connection"."CreatedOn" "CreatedOn"
+	,"M_KioskOwner_Radius_Connection"."ModifiedBy" "ModifiedBy"
+	,"M_KioskOwner_Radius_Connection"."ModifiedOn" "ModifiedOn"
+from "dbo"."M_KioskOwner_Radius_Connection" "M_KioskOwner_Radius_Connection"
+	left join "dbo"."M_Kiosk_Owner" "KioskOwner_" on "M_KioskOwner_Radius_Connection"."KioskOwner_ID" = "KioskOwner_"."KioskOwner_ID"
+	left join "dbo"."M_Radius_Server_Interface" "RadiusServer_Interface_" on "M_KioskOwner_Radius_Connection"."RadiusServer_Code" = "RadiusServer_Interface_"."RadiusServer_Code" and "M_KioskOwner_Radius_Connection"."Interface_Code" = "RadiusServer_Interface_"."Interface_Code"
+	left join "dbo"."M_Interface" "RadiusServer_Interface_Interface_" on "RadiusServer_Interface_"."Interface_Code" = "RadiusServer_Interface_Interface_"."Interface_Code"
+	left join "dbo"."M_Radius_Server" "RadiusServer_Interface_RadiusServer_" on "RadiusServer_Interface_"."RadiusServer_Code" = "RadiusServer_Interface_RadiusServer_"."RadiusServer_Code"
+]]></text>
+    </command>
+    <command id="Connection_IDUniqueIdentifierCommand" type="Text" event="Inserting">
+      <text><![CDATA[select newid()]]></text>
+      <output>
+        <fieldOutput fieldName="Connection_ID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="Connection_ID" type="Guid" allowNulls="false" isPrimaryKey="true" default="(newid())" label="Connection#" />
+    <field name="KioskOwner_ID" type="Guid" allowNulls="false" label="Kiosk Owner#" showInSummary="true">
+      <items style="Lookup" dataController="M_Kiosk_Owner" newDataView="createForm1" dataValueField="KioskOwner_ID" dataTextField="KioskOwner_Code" />
+    </field>
+    <field name="KioskOwner_KioskOwner_Code" type="String" readOnly="true" label="Kiosk Owner Code" length="10" />
+    <field name="RadiusServer_Code" type="String" allowNulls="false" label="Radius Server Code" length="10" showInSummary="true">
+      <items style="Lookup" dataController="M_Radius_Server_Interface" newDataView="createForm1" dataValueField="RadiusServer_Code,Interface_Code" dataTextField="CreatedBy" copy="Interface_Code=Interface_Code" />
+    </field>
+    <field name="RadiusServer_Interface_CreatedBy" type="String" readOnly="true" label="Radius Server Interface Created By" length="128" />
+    <field name="RadiusServer_Interface_Interface_Interface_Name" type="String" readOnly="true" label="Radius Server Interface Name" length="50" />
+    <field name="RadiusServer_Interface_RadiusServer_RadiusServer_Name" type="String" readOnly="true" label="Radius Server Interface Radius Server Name" length="100" />
+    <field name="Interface_Code" type="String" allowNulls="false" label="Interface Code" length="5" showInSummary="true" />
+    <field name="Connection_IP_URL" type="String" allowNulls="false" label="Connection IP URL" length="20" showInSummary="true" />
+    <field name="Connection_Database" type="String" label="Connection Database" length="50" showInSummary="true" />
+    <field name="Connection_Username" type="String" allowNulls="false" label="Connection Username" length="50" />
+    <field name="Connection_Password" type="String" allowNulls="false" label="Connection Password" length="50" />
+    <field name="Item_Flag" type="Boolean" default="((1))" label="Item Flag" />
+    <field name="CreatedBy" type="String" label="Created By" length="128" />
+    <field name="CreatedOn" type="DateTime" label="Created On" />
+    <field name="ModifiedBy" type="String" label="Modified By" length="128" />
+    <field name="ModifiedOn" type="DateTime" label="Modified On" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="M Kiosk Owner Radius Connection">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="KioskOwner_ID" aliasFieldName="KioskOwner_KioskOwner_Code" />
+        <dataField fieldName="RadiusServer_Code" aliasFieldName="RadiusServer_Interface_CreatedBy" />
+        <dataField fieldName="Interface_Code" textMode="Static" />
+        <dataField fieldName="Connection_IP_URL" columns="20" />
+        <dataField fieldName="Connection_Database" columns="50" />
+        <dataField fieldName="Connection_Username" columns="50" />
+        <dataField fieldName="Item_Flag" />
+        <dataField fieldName="CreatedBy" />
+        <dataField fieldName="CreatedOn" columns="10" />
+        <dataField fieldName="ModifiedBy" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review M Kiosk Owner Radius Connection">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="M Kiosk Owner Radius Connection" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="KioskOwner_ID" aliasFieldName="KioskOwner_KioskOwner_Code" />
+            <dataField fieldName="RadiusServer_Code" aliasFieldName="RadiusServer_Interface_CreatedBy" />
+            <dataField fieldName="Interface_Code" textMode="Static" />
+            <dataField fieldName="Connection_IP_URL" columns="20" />
+            <dataField fieldName="Connection_Database" columns="50" />
+            <dataField fieldName="Connection_Username" columns="50" />
+            <dataField fieldName="Connection_Password" columns="50" />
+            <dataField fieldName="Item_Flag" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+        <category id="c2" headerText="Reference Information">
+          <description><![CDATA[$DefaultReferenceDescription]]></description>
+          <dataFields>
+            <dataField fieldName="RadiusServer_Interface_Interface_Interface_Name" columns="50" />
+            <dataField fieldName="RadiusServer_Interface_RadiusServer_RadiusServer_Name" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New M Kiosk Owner Radius Connection">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New M Kiosk Owner Radius Connection" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="KioskOwner_ID" aliasFieldName="KioskOwner_KioskOwner_Code" />
+            <dataField fieldName="RadiusServer_Code" aliasFieldName="RadiusServer_Interface_CreatedBy" />
+            <dataField fieldName="Interface_Code" textMode="Static" />
+            <dataField fieldName="Connection_IP_URL" columns="20" />
+            <dataField fieldName="Connection_Database" columns="50" />
+            <dataField fieldName="Connection_Username" columns="50" />
+            <dataField fieldName="Connection_Password" columns="50" />
+            <dataField fieldName="Item_Flag" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+      <action id="a9" />
+      <action id="a10" commandName="BatchEdit" commandArgument="editForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

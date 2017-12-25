@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Base_Customer" conflictDetection="overwriteChanges" label="Base Customer" plugIn="VSM.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Base_Customer"."Customer_ID" "Customer_ID"
+	,"Base_Customer"."KioskOwner_ID" "KioskOwner_ID"
+	,"KioskOwner_"."KioskOwner_Code" "KioskOwner_KioskOwner_Code"
+	,"Base_Customer"."KioskOwner_Branch_ID" "KioskOwner_Branch_ID"
+	,"KioskOwner_Branch_"."KioskOwner_Branch_Code" "KioskOwner_Branch_KioskOwner_Branch_Code"
+	,"Base_Customer"."IdenDoc_Code" "IdenDoc_Code"
+	,"IdenDoc_"."IdenDoc_Name" "IdenDoc_IdenDoc_Name"
+	,"Base_Customer"."Identity_ID" "Identity_ID"
+	,"Base_Customer"."tName_Locale" "tName_Locale"
+	,"Base_Customer"."fName_Locale" "fName_Locale"
+	,"Base_Customer"."lName_Locale" "lName_Locale"
+	,"Base_Customer"."mName_Locale" "mName_Locale"
+	,"Base_Customer"."tName_EN" "tName_EN"
+	,"Base_Customer"."fName_EN" "fName_EN"
+	,"Base_Customer"."lName_EN" "lName_EN"
+	,"Base_Customer"."mName_EN" "mName_EN"
+	,"Base_Customer"."BirthDate" "BirthDate"
+	,"Base_Customer"."IdenIssuedDate" "IdenIssuedDate"
+	,"Base_Customer"."IdenExpireDate" "IdenExpireDate"
+	,"Base_Customer"."Addr_Home" "Addr_Home"
+	,"Base_Customer"."Addr_Moo" "Addr_Moo"
+	,"Base_Customer"."Addr_Trok" "Addr_Trok"
+	,"Base_Customer"."Addr_SubDistrict" "Addr_SubDistrict"
+	,"Base_Customer"."Addr_District" "Addr_District"
+	,"Base_Customer"."Addr_Province" "Addr_Province"
+	,"Base_Customer"."Address" "Address"
+	,"Base_Customer"."Sex" "Sex"
+	,"Base_Customer"."Nationality" "Nationality"
+	,"Base_Customer"."Country_Code" "Country_Code"
+	,"Country_"."Country_Name_Locale" "Country_Country_Name_Locale"
+	,"Base_Customer"."Email" "Email"
+	,"Base_Customer"."Phone_No" "Phone_No"
+	,"Base_Customer"."GenBy_Code" "GenBy_Code"
+	,"GenBy_"."GenBy_Name" "GenBy_GenBy_Name"
+	,"Base_Customer"."Refer_ID" "Refer_ID"
+	,"Base_Customer"."Item_Flag" "Item_Flag"
+	,"Base_Customer"."CreatedBy" "CreatedBy"
+	,"Base_Customer"."CreatedOn" "CreatedOn"
+	,"Base_Customer"."ModifiedBy" "ModifiedBy"
+	,"Base_Customer"."ModifiedOn" "ModifiedOn"
+from "dbo"."Base_Customer" "Base_Customer"
+	left join "dbo"."M_Kiosk_Owner" "KioskOwner_" on "Base_Customer"."KioskOwner_ID" = "KioskOwner_"."KioskOwner_ID"
+	left join "dbo"."M_Kiosk_Owner_Branch" "KioskOwner_Branch_" on "Base_Customer"."KioskOwner_Branch_ID" = "KioskOwner_Branch_"."KioskOwner_Branch_ID"
+	left join "dbo"."M_IDentify_Document" "IdenDoc_" on "Base_Customer"."IdenDoc_Code" = "IdenDoc_"."IdenDoc_Code"
+	left join "dbo"."M_Country" "Country_" on "Base_Customer"."Country_Code" = "Country_"."Country_Code"
+	left join "dbo"."M_Generate_By" "GenBy_" on "Base_Customer"."GenBy_Code" = "GenBy_"."GenBy_Code"
+]]></text>
+    </command>
+    <command id="Customer_IDUniqueIdentifierCommand" type="Text" event="Inserting">
+      <text><![CDATA[select newid()]]></text>
+      <output>
+        <fieldOutput fieldName="Customer_ID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="Customer_ID" type="Guid" allowNulls="false" isPrimaryKey="true" default="(newid())" label="Customer#" />
+    <field name="KioskOwner_ID" type="Guid" allowNulls="false" label="Kiosk Owner#" showInSummary="true">
+      <items style="Lookup" dataController="M_Kiosk_Owner" newDataView="createForm1" dataValueField="KioskOwner_ID" dataTextField="KioskOwner_Code" />
+    </field>
+    <field name="KioskOwner_KioskOwner_Code" type="String" readOnly="true" label="Kiosk Owner Code" length="10" />
+    <field name="KioskOwner_Branch_ID" type="Guid" allowNulls="false" label="Kiosk Owner Branch#" showInSummary="true">
+      <items style="Lookup" dataController="M_Kiosk_Owner_Branch" newDataView="createForm1" dataValueField="KioskOwner_Branch_ID" />
+    </field>
+    <field name="KioskOwner_Branch_KioskOwner_Branch_Code" type="String" readOnly="true" label="Kiosk Owner Branch Code" length="10" />
+    <field name="IdenDoc_Code" type="String" allowNulls="false" label="Iden Doc Code" length="1" showInSummary="true">
+      <items style="Lookup" dataController="M_IDentify_Document" newDataView="createForm1" dataValueField="IdenDoc_Code" dataTextField="IdenDoc_Name" />
+    </field>
+    <field name="IdenDoc_IdenDoc_Name" type="String" readOnly="true" label="Iden Doc Name" length="50" />
+    <field name="Identity_ID" type="String" allowNulls="false" label="Identity#" length="20" showInSummary="true" />
+    <field name="tName_Locale" type="String" label="t Name Locale" length="100" showInSummary="true" />
+    <field name="fName_Locale" type="String" label="f Name Locale" length="200" />
+    <field name="lName_Locale" type="String" label="l Name Locale" length="200" />
+    <field name="mName_Locale" type="String" label="m Name Locale" length="200" />
+    <field name="tName_EN" type="String" label="t Name EN" length="100" />
+    <field name="fName_EN" type="String" label="f Name EN" length="200" />
+    <field name="lName_EN" type="String" label="l Name EN" length="200" />
+    <field name="mName_EN" type="String" label="m Name EN" length="200" />
+    <field name="BirthDate" type="String" label="Birth Date" length="20" />
+    <field name="IdenIssuedDate" type="String" label="Iden Issued Date" length="20" />
+    <field name="IdenExpireDate" type="String" label="Iden Expire Date" length="20" />
+    <field name="Addr_Home" type="String" label="Addr Home" length="100" />
+    <field name="Addr_Moo" type="String" label="Addr Moo" length="100" />
+    <field name="Addr_Trok" type="String" label="Addr Trok" length="100" />
+    <field name="Addr_SubDistrict" type="String" label="Addr Sub District" length="200" />
+    <field name="Addr_District" type="String" label="Addr District" length="200" />
+    <field name="Addr_Province" type="String" label="Addr Province" length="500" />
+    <field name="Address" type="String" label="Address" length="200" />
+    <field name="Sex" type="String" label="Sex" length="1" />
+    <field name="Nationality" type="String" label="Nationality" length="50" />
+    <field name="Country_Code" type="String" label="Country Code" length="2">
+      <items style="Lookup" dataController="M_Country" newDataView="createForm1" dataValueField="Country_Code" dataTextField="Country_Name_Locale" />
+    </field>
+    <field name="Country_Country_Name_Locale" type="String" readOnly="true" label="Country Name Locale" length="50" />
+    <field name="Email" type="String" label="Email" length="100" />
+    <field name="Phone_No" type="String" label="Phone No" length="50" />
+    <field name="GenBy_Code" type="String" allowNulls="false" label="Gen By Code" length="1">
+      <items style="Lookup" dataController="M_Generate_By" newDataView="createForm1" dataValueField="GenBy_Code" dataTextField="GenBy_Name" />
+    </field>
+    <field name="GenBy_GenBy_Name" type="String" readOnly="true" label="Gen By Name" length="50" />
+    <field name="Refer_ID" type="Guid" label="Refer#" />
+    <field name="Item_Flag" type="Boolean" default="((1))" label="Item Flag" />
+    <field name="CreatedBy" type="String" label="Created By" length="128" />
+    <field name="CreatedOn" type="DateTime" label="Created On" />
+    <field name="ModifiedBy" type="String" label="Modified By" length="128" />
+    <field name="ModifiedOn" type="DateTime" label="Modified On" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Base Customer">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="KioskOwner_ID" aliasFieldName="KioskOwner_KioskOwner_Code" />
+        <dataField fieldName="KioskOwner_Branch_ID" aliasFieldName="KioskOwner_Branch_KioskOwner_Branch_Code" />
+        <dataField fieldName="IdenDoc_Code" aliasFieldName="IdenDoc_IdenDoc_Name" />
+        <dataField fieldName="Identity_ID" columns="20" />
+        <dataField fieldName="tName_Locale" />
+        <dataField fieldName="fName_Locale" />
+        <dataField fieldName="lName_Locale" />
+        <dataField fieldName="mName_Locale" />
+        <dataField fieldName="tName_EN" />
+        <dataField fieldName="fName_EN" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Base Customer">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Base Customer" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="KioskOwner_ID" aliasFieldName="KioskOwner_KioskOwner_Code" />
+            <dataField fieldName="KioskOwner_Branch_ID" aliasFieldName="KioskOwner_Branch_KioskOwner_Branch_Code" />
+            <dataField fieldName="IdenDoc_Code" aliasFieldName="IdenDoc_IdenDoc_Name" />
+            <dataField fieldName="Identity_ID" columns="20" />
+            <dataField fieldName="tName_Locale" />
+            <dataField fieldName="fName_Locale" />
+            <dataField fieldName="lName_Locale" />
+            <dataField fieldName="mName_Locale" />
+            <dataField fieldName="tName_EN" />
+            <dataField fieldName="fName_EN" />
+            <dataField fieldName="lName_EN" />
+            <dataField fieldName="mName_EN" />
+            <dataField fieldName="BirthDate" columns="20" />
+            <dataField fieldName="IdenIssuedDate" columns="20" />
+            <dataField fieldName="IdenExpireDate" columns="20" />
+            <dataField fieldName="Addr_Home" />
+            <dataField fieldName="Addr_Moo" />
+            <dataField fieldName="Addr_Trok" />
+            <dataField fieldName="Addr_SubDistrict" />
+            <dataField fieldName="Addr_District" />
+            <dataField fieldName="Addr_Province" />
+            <dataField fieldName="Address" />
+            <dataField fieldName="Sex" columns="1" />
+            <dataField fieldName="Nationality" columns="50" />
+            <dataField fieldName="Country_Code" aliasFieldName="Country_Country_Name_Locale" />
+            <dataField fieldName="Email" />
+            <dataField fieldName="Phone_No" columns="50" />
+            <dataField fieldName="GenBy_Code" aliasFieldName="GenBy_GenBy_Name" />
+            <dataField fieldName="Refer_ID" columns="15" />
+            <dataField fieldName="Item_Flag" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Base Customer">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New Base Customer" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="KioskOwner_ID" aliasFieldName="KioskOwner_KioskOwner_Code" />
+            <dataField fieldName="KioskOwner_Branch_ID" aliasFieldName="KioskOwner_Branch_KioskOwner_Branch_Code" />
+            <dataField fieldName="IdenDoc_Code" aliasFieldName="IdenDoc_IdenDoc_Name" />
+            <dataField fieldName="Identity_ID" columns="20" />
+            <dataField fieldName="tName_Locale" />
+            <dataField fieldName="fName_Locale" />
+            <dataField fieldName="lName_Locale" />
+            <dataField fieldName="mName_Locale" />
+            <dataField fieldName="tName_EN" />
+            <dataField fieldName="fName_EN" />
+            <dataField fieldName="lName_EN" />
+            <dataField fieldName="mName_EN" />
+            <dataField fieldName="BirthDate" columns="20" />
+            <dataField fieldName="IdenIssuedDate" columns="20" />
+            <dataField fieldName="IdenExpireDate" columns="20" />
+            <dataField fieldName="Addr_Home" />
+            <dataField fieldName="Addr_Moo" />
+            <dataField fieldName="Addr_Trok" />
+            <dataField fieldName="Addr_SubDistrict" />
+            <dataField fieldName="Addr_District" />
+            <dataField fieldName="Addr_Province" />
+            <dataField fieldName="Address" />
+            <dataField fieldName="Sex" columns="1" />
+            <dataField fieldName="Nationality" columns="50" />
+            <dataField fieldName="Country_Code" aliasFieldName="Country_Country_Name_Locale" />
+            <dataField fieldName="Email" />
+            <dataField fieldName="Phone_No" columns="50" />
+            <dataField fieldName="GenBy_Code" aliasFieldName="GenBy_GenBy_Name" />
+            <dataField fieldName="Refer_ID" columns="15" />
+            <dataField fieldName="Item_Flag" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+      <action id="a9" />
+      <action id="a10" commandName="BatchEdit" commandArgument="editForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

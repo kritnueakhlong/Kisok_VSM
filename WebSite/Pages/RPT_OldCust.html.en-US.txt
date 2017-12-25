@@ -1,0 +1,11 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in RPT_OldCust.html project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_Old_Cust_Detail_Report^รายงานรายละเอียดการใช้งานของลูกค้าเก่า^Page_Old_Cust_Detail_Report^
+
+^Page_OldCust_Report^รายงานการขอใช้งานลูกค้าเก่า^Page_OldCust_Report^
+

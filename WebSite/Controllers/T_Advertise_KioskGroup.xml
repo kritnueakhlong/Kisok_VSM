@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="T_Advertise_KioskGroup" conflictDetection="overwriteChanges" label="T Advertise Kiosk Group" plugIn="VSM.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"T_Advertise_KioskGroup"."Advertise_ID" "Advertise_ID"
+	,"Advertise_"."Advertise_Desc" "Advertise_Advertise_Desc"
+	,"Advertise_KioskOwner_"."KioskOwner_Code" "Advertise_KioskOwner_KioskOwner_Code"
+	,"T_Advertise_KioskGroup"."KioskGroup_ID" "KioskGroup_ID"
+	,"KioskGroup_"."KioskGroup_Name" "KioskGroup_KioskGroup_Name"
+	,"T_Advertise_KioskGroup"."CreatedBy" "CreatedBy"
+	,"T_Advertise_KioskGroup"."CreatedOn" "CreatedOn"
+	,"T_Advertise_KioskGroup"."ModifiedBy" "ModifiedBy"
+	,"T_Advertise_KioskGroup"."ModifiedOn" "ModifiedOn"
+from "dbo"."T_Advertise_KioskGroup" "T_Advertise_KioskGroup"
+	left join "dbo"."T_Advertise" "Advertise_" on "T_Advertise_KioskGroup"."Advertise_ID" = "Advertise_"."Advertise_ID"
+	left join "dbo"."M_Kiosk_Owner" "Advertise_KioskOwner_" on "Advertise_"."KioskOwner_ID" = "Advertise_KioskOwner_"."KioskOwner_ID"
+	left join "dbo"."M_KioskGroup" "KioskGroup_" on "T_Advertise_KioskGroup"."KioskGroup_ID" = "KioskGroup_"."KioskGroup_ID"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="Advertise_ID" type="Guid" allowNulls="false" isPrimaryKey="true" label="Advertise#" showInSummary="true">
+      <items style="Lookup" dataController="T_Advertise" newDataView="createForm1" dataValueField="Advertise_ID" dataTextField="Advertise_Date" />
+    </field>
+    <field name="Advertise_Advertise_Desc" type="String" readOnly="true" label="Advertise Desc" length="1000" />
+    <field name="Advertise_KioskOwner_KioskOwner_Code" type="String" readOnly="true" label="Advertise Kiosk Owner Code" length="10" />
+    <field name="KioskGroup_ID" type="Guid" allowNulls="false" isPrimaryKey="true" label="Kiosk Group#" showInSummary="true">
+      <items style="Lookup" dataController="M_KioskGroup" newDataView="createForm1" dataValueField="KioskGroup_ID" dataTextField="KioskGroup_Name" />
+    </field>
+    <field name="KioskGroup_KioskGroup_Name" type="String" readOnly="true" label="Kiosk Group Name" length="50" />
+    <field name="CreatedBy" type="String" label="Created By" length="128" showInSummary="true" />
+    <field name="CreatedOn" type="DateTime" label="Created On" showInSummary="true" />
+    <field name="ModifiedBy" type="String" label="Modified By" length="128" showInSummary="true" />
+    <field name="ModifiedOn" type="DateTime" label="Modified On" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="T Advertise Kiosk Group">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Advertise_ID" aliasFieldName="Advertise_Advertise_Desc" />
+        <dataField fieldName="KioskGroup_ID" aliasFieldName="KioskGroup_KioskGroup_Name" />
+        <dataField fieldName="CreatedBy" />
+        <dataField fieldName="CreatedOn" columns="10" />
+        <dataField fieldName="ModifiedBy" />
+        <dataField fieldName="ModifiedOn" columns="10" />
+        <dataField fieldName="Advertise_KioskOwner_KioskOwner_Code" columns="10" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review T Advertise Kiosk Group">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="T Advertise Kiosk Group" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Advertise_ID" aliasFieldName="Advertise_Advertise_Desc" />
+            <dataField fieldName="KioskGroup_ID" aliasFieldName="KioskGroup_KioskGroup_Name" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+        <category id="c2" headerText="Reference Information">
+          <description><![CDATA[$DefaultReferenceDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Advertise_KioskOwner_KioskOwner_Code" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New T Advertise Kiosk Group">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New T Advertise Kiosk Group" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Advertise_ID" aliasFieldName="Advertise_Advertise_Desc" />
+            <dataField fieldName="KioskGroup_ID" aliasFieldName="KioskGroup_KioskGroup_Name" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+      <action id="a9" />
+      <action id="a10" commandName="BatchEdit" commandArgument="editForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

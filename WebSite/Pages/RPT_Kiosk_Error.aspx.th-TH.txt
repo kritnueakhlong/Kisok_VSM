@@ -1,0 +1,9 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in RPT_Kiosk_Error.aspx project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_KioskError_Report^รายงานปัญหาการใช้งาน^Page_KioskError_Report^
+

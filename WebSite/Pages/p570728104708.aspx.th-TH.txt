@@ -1,0 +1,9 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in p570728104708.aspx project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_Member^Member^Page_Member^
+

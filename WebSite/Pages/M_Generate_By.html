@@ -1,0 +1,18 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>M Generate By</title>
+    <meta name="description" content="This page allows m generate by management.">
+  </head>
+  <body class="Wide">
+    <div data-flow="row">
+      <div id="view1" data-controller="M_Generate_By" data-view="grid1" data-show-in-summary="true"> </div>
+    </div>
+    <div data-flow="row" style="padding-top:8px">
+      <div data-activator="Tab|Base Customer">
+        <div id="view2" data-controller="Base_Customer" data-view="grid1" data-filter-source="view1" data-filter-fields="GenBy_Code" data-page-size="5" data-auto-hide="container" data-show-modal-forms="true"> </div>
+      </div>
+    </div>
+  </body>
+</html>

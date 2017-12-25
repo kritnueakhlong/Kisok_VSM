@@ -1,0 +1,21 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in T_Customer_Blacklist.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Blacklist_Description^รายละเอียด^Blacklist_Description^
+
+^Controller_Customer_Blacklist^Blacklist account^Controller_Customer_Blacklist^
+
+^Created_By^สร้างโดย^Created_By^
+
+^Created_On^วันที่สร้าง^Created_On^
+
+^Identity_ID^หมายเลขบัตร^Identity_ID^
+
+^Modified_By^แก้ไขโดย^Modified_By^
+
+^Modified_On^วันที่ทำงานล่าสุด^Modified_On^
+

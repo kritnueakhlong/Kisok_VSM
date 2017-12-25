@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="HelpDesk" conflictDetection="overwriteChanges" label="Help Desk" plugIn="VSM.Data.AnnotationPlugIn" handler="VSM.Rules.HelpDeskBusinessRules" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"HelpDesk"."HelpDesk_ID" "HelpDesk_ID"
+	,"HelpDesk"."Personnel_no" "Personnel_no"
+	,"HelpDesk"."HelpDesk_FirstName" "HelpDesk_FirstName"
+	,"HelpDesk"."HelpDesk_LastName" "HelpDesk_LastName"
+	,"HelpDesk"."HelpDesk_AuthenPassword" "HelpDesk_AuthenPassword"
+	,"HelpDesk"."CreatedBy" "CreatedBy"
+	,"HelpDesk"."CreatedOn" "CreatedOn"
+	,"HelpDesk"."ModifiedBy" "ModifiedBy"
+	,"HelpDesk"."ModifiedOn" "ModifiedOn"
+from "dbo"."HelpDesk" "HelpDesk"
+]]></text>
+    </command>
+    <command id="HelpDesk_IDUniqueIdentifierCommand" type="Text" event="Inserting">
+      <text><![CDATA[select newid()]]></text>
+      <output>
+        <fieldOutput fieldName="HelpDesk_ID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="HelpDesk_ID" type="Guid" allowNulls="false" isPrimaryKey="true" default="(newid())" label="Help Desk#" hidden="false" />
+    <field name="Personnel_no" type="String" label="^Personnel_no^รหัสพนักงาน^Personnel_no^" length="50" showInSummary="true" />
+    <field name="HelpDesk_FirstName" type="String" allowNulls="false" label="^FirstName^ชื่อ^FirstName^" length="250" showInSummary="true" />
+    <field name="HelpDesk_LastName" type="String" label="^LastName^นามสกุล^LastName^" length="250" showInSummary="true" />
+    <field name="HelpDesk_AuthenPassword" type="String" allowNulls="false" label="^Authen_Password^รหัสผ่าน^Authen_Password^" length="128" />
+    <field name="CreatedBy" type="String" label="^Created_By^สร้างโดย^Created_By^" length="128" showInSummary="true" />
+    <field name="CreatedOn" type="DateTime" label="^Created_On^วันที่สร้าง^Created_On^" showInSummary="true" />
+    <field name="ModifiedBy" type="String" label="^Modified_By^แก้ไขโดย^Modified_By^" length="128" />
+    <field name="ModifiedOn" type="DateTime" label="^Modified_On^วันที่แก้ไข^Modified_On^" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="^Grid_HelpDesk^Help Desk^Grid_HelpDesk^">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="HelpDesk_FirstName" />
+        <dataField fieldName="Personnel_no" columns="50" />
+        <dataField fieldName="HelpDesk_LastName" />
+        <dataField fieldName="CreatedBy" />
+        <dataField fieldName="CreatedOn" columns="10" />
+        <dataField fieldName="ModifiedBy" />
+        <dataField fieldName="ModifiedOn" columns="10" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Help Desk">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Help Desk" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Personnel_no" columns="50" />
+            <dataField fieldName="HelpDesk_FirstName" />
+            <dataField fieldName="HelpDesk_LastName" />
+            <dataField fieldName="HelpDesk_AuthenPassword" textMode="Password" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Help Desk">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New Help Desk" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Personnel_no" columns="50" />
+            <dataField fieldName="HelpDesk_FirstName" />
+            <dataField fieldName="HelpDesk_LastName" />
+            <dataField fieldName="HelpDesk_AuthenPassword" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid" />
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+  <businessRules>
+    <rule id="r100" commandName="Update|Insert" type="Code" phase="Before" />
+  </businessRules>
+</dataController>

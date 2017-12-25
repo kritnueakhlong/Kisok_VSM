@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode title="^SiteHome^Home^SiteHome^" description="" url="~/index.html">
+    <siteMapNode title="^Site_Home^Home^Site_Home^" description="" url="~/pages/home" roles="Administrators,Viewer" cssClass="Wide" />
+    <siteMapNode title="^Site_Kiosk^Kiosk^Site_Kiosk^" description="" url="~/pages/kiosk" roles="Administrators,Viewer">
+      <siteMapNode title="^Site_ManageKiosk^Manage Kiosk^Site_ManageKiosk^" description="" url="~/pages/manage-kiosk" roles="Administrators" />
+      <siteMapNode title="^Site_Kiosk_Monitoring^Monitoring^Site_Kiosk_Monitoring^" description="" url="~/pages/monitoring" roles="*" />
+    </siteMapNode>
+    <siteMapNode title="^ReportsPath^Reports^ReportsPath^" description="" url="~/pages/all-reports" roles="Administrators,Viewer">
+      <siteMapNode title="^Site_Register_Report^รายงานการลงทะเบียนใหม่^Site_Register_Report^" description="" url="~/pages/rpt_regis" />
+      <siteMapNode title="^Site_OldCust_Report^รายงานการขอใช้งานลูกค้าเก่า^Site_OldCust_Report^" description="" url="~/pages/rpt_old-cust" roles="*" />
+      <siteMapNode title="^Site_KioskUsage_Report^รายงานการใช้งาน kiosk ตามจุดต่างๆ^Site_KioskUsage_Report^" description="" url="~/pages/rpt_kiosk_usage" roles="*" />
+      <siteMapNode title="^Site_KioskError_Report^รายงานปัญหาการใช้งาน^Site_KioskError_Report^" description="" url="~/pages/rpt_kiosk_error" roles="*" />
+      <siteMapNode title="^Site_LogKiosk_Report^รายงานประวัติการใช้งานตู้ Kiosk^Site_LogKiosk_Report^" description="" url="~/pages/rpt_log_kiosk" roles="*" />
+    </siteMapNode>
+    <siteMapNode title="^Site_M_System_Config^M_System_Config^Site_M_System_Config^" description="" url="~/pages/m_system_config" roles="Administrators" cssClass="Wide">
+      <siteMapNode title="^Site_M_Config_Type^M Config Type^Site_M_Config_Type^" description="View M Config Type" url="~/pages/m_config_type" cssClass="Wide" />
+      <siteMapNode title="^Site_Customer_Blacklist^Customer Blacklist^Site_Customer_Blacklist^" description="" url="~/pages/customer_blacklist" />
+    </siteMapNode>
+    <siteMapNode title="^Site_Member^Member^Site_Member^" description="" url="~/pages/p-570728104708" roles="Administrators">
+      <siteMapNode title="^Site_User^User^Site_User^" description="" url="~/pages/user" roles="Administrators" />
+      <siteMapNode title="^Site_EditUser^Edit User^Site_EditUser^" description="" url="~/pages/edit-user" roles="Users" />
+    </siteMapNode>
+    <siteMapNode title="^Site_HelpDesk^Help Desk^Site_HelpDesk^" description="" url="~/pages/help-desk" roles="Administrators,HelpDesk">
+      <siteMapNode title="^Site_Manage_HelpDesk^Manage Help Desk^Site_Manage_HelpDesk^" description="View Help Desk" url="~/pages/manage-help-desk" />
+    </siteMapNode>
+    <siteMapNode title="New Pages" description="" url="~/pages/p-601222020553">
+      <siteMapNode title="T Emp Regis Usage" description="View T Emp Regis Usage" url="~/pages/t_emp-regis_usage" />
+    </siteMapNode>
+    <siteMapNode title="Master Data" description="" url="~/pages/master-data" roles="Administrators" cssClass="Wide">
+      <siteMapNode title="M I Dentify Document" description="View M I Dentify Document" url="~/pages/m_identify_document" cssClass="Wide" />
+      <siteMapNode title="M Generate By" description="View M Generate By" url="~/pages/m_generate_by" cssClass="Wide" />
+      <siteMapNode title="M Country" description="View M Country" url="~/pages/m_country" cssClass="Wide" />
+      <siteMapNode title="M Localization" description="View M Localization" url="~/pages/m_localization" />
+      <siteMapNode title="M Usage Status" description="View M Usage Status" url="~/pages/m_usage_status" />
+      <siteMapNode title="M Localization Country" description="View M Localization Country" url="~/pages/m_localization_country" />
+      <siteMapNode title="M Kiosk Type" description="View M Kiosk Type" url="~/pages/m_kiosk_type" cssClass="Wide" />
+      <siteMapNode title="M Material Type" description="View M Material Type" url="~/pages/m_material_type" cssClass="Wide" />
+      <siteMapNode title="M Material" description="View M Material" url="~/pages/m_material" />
+      <siteMapNode title="M Radius Server" description="View M Radius Server" url="~/pages/m_radius_server" cssClass="Wide" />
+      <siteMapNode title="M Interface" description="View M Interface" url="~/pages/m_interface" cssClass="Wide" />
+      <siteMapNode title="M Kiosk Owner" description="View M Kiosk Owner" url="~/pages/m_kiosk_owner" cssClass="Wide" />
+      <siteMapNode title="M Kiosk Owner Branch" description="View M Kiosk Owner Branch" url="~/pages/m_kiosk_owner_branch" />
+      <siteMapNode title="M Ssid" description="View M Ssid" url="~/pages/m_ssid" />
+      <siteMapNode title="M System Config" description="" url="~/pages/msystem-config" />
+      <siteMapNode title="M Kiosk Owner Config" description="View M Kiosk Owner Config" url="~/pages/m_kiosk-owner_config" />
+      <siteMapNode title="M Kiosk Group" description="View M Kiosk Group" url="~/pages/m_kiosk-group" cssClass="Wide" />
+      <siteMapNode title="M Kiosk" description="View M Kiosk" url="~/pages/m_kiosk" cssClass="Wide" />
+      <siteMapNode title="M Kiosk Material" description="View M Kiosk Material" url="~/pages/m_kiosk_material" />
+      <siteMapNode title="M Kiosk Group Kiosk#" description="View M Kiosk Group Kiosk#" url="~/pages/m_kiosk-group_kiosk-id" />
+    </siteMapNode>
+    <siteMapNode title="T Kiosk Owner MA" description="View T Kiosk Owner MA" url="~/pages/t_kiosk-owner_ma" roles="Administrators" />
+    <siteMapNode title="Customer Transaction" description="" url="~/pages/customer-transaction" roles="Administrators">
+      <siteMapNode title="Base Customer" description="View Base Customer" url="~/pages/base_customer" />
+      <siteMapNode title="Base Customer Authentication" description="View Base Customer Authentication" url="~/pages/base_customer_authentication" />
+    </siteMapNode>
+    <siteMapNode title="T Kiosk Usage" description="View T Kiosk Usage" url="~/pages/t_kiosk_usage" roles="Administrators" />
+    <siteMapNode title="T Customer Blacklist" description="View T Customer Blacklist" url="~/pages/t_customer_blacklist" roles="Administrators" />
+    <siteMapNode title="Advertise Contents" description="" url="~/pages/advertise-contents" roles="Administrators">
+      <siteMapNode title="T Advertise Kiosk" description="View T Advertise Kiosk" url="~/pages/t_advertise_kiosk" />
+      <siteMapNode title="T Contents Kiosk" description="View T Contents Kiosk" url="~/pages/t_contents_kiosk" />
+      <siteMapNode title="T Advertise" description="View T Advertise" url="~/pages/t_advertise" />
+      <siteMapNode title="T Advertise Kiosk Group" description="View T Advertise Kiosk Group" url="~/pages/t_advertise_kiosk-group" />
+      <siteMapNode title="T Contents" description="View T Contents" url="~/pages/t_contents" />
+      <siteMapNode title="T Contents Kiosk Group" description="View T Contents Kiosk Group" url="~/pages/t_contents_kiosk-group" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

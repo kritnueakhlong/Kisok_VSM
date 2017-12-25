@@ -1,0 +1,11 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in ManageHelpDesk.html project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_HelpDesk_view1^Manage Help Desk^Page_HelpDesk_view1^
+
+^Page_Manage_HelpDesk^Manage Help Desk^Page_Manage_HelpDesk^
+

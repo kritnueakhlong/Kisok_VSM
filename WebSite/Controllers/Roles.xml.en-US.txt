@@ -1,0 +1,13 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in Roles.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_Roles_grid1^Roles^Page_Roles_grid1^
+
+^Roles^Roles Code^Roles^
+
+^RolesName^Roles Name^RolesName^
+

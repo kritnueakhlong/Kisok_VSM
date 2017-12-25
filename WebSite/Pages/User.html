@@ -1,0 +1,18 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>^Page_User^จัดการผู้ใช้^Page_User^</title>
+    <meta name="description" content="This page allows employee management.">
+  </head>
+  <body data-authorize-roles="Administrators">
+    <div data-flow="row">
+      <div data-activator="Tab|^Page_User_view1^User^Page_User_view1^">
+        <div id="view1" data-controller="Employee" data-view="grid1" data-show-in-summary="true"> </div>
+      </div>
+      <div data-activator="Tab|^Page_User_view2^User Roles^Page_User_view2^">
+        <div id="view2" data-controller="Employee_Roles" data-view="grid1" data-filter-source="view1" data-filter-fields="emp_id" data-auto-hide="self" data-show-modal-forms="true"> </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="M_Localization_Country" conflictDetection="overwriteChanges" label="M Localization Country" plugIn="VSM.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"M_Localization_Country"."Locale_Code" "Locale_Code"
+	,"Locale_"."Locale_Name" "Locale_Locale_Name"
+	,"M_Localization_Country"."Country_Code" "Country_Code"
+	,"Country_"."Country_Name_Locale" "Country_Country_Name_Locale"
+	,"M_Localization_Country"."CreatedBy" "CreatedBy"
+	,"M_Localization_Country"."CreatedOn" "CreatedOn"
+	,"M_Localization_Country"."ModifiedBy" "ModifiedBy"
+	,"M_Localization_Country"."ModifiedOn" "ModifiedOn"
+from "dbo"."M_Localization_Country" "M_Localization_Country"
+	left join "dbo"."M_Localization" "Locale_" on "M_Localization_Country"."Locale_Code" = "Locale_"."Locale_Code"
+	left join "dbo"."M_Country" "Country_" on "M_Localization_Country"."Country_Code" = "Country_"."Country_Code"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="Locale_Code" type="String" allowNulls="false" isPrimaryKey="true" label="Locale Code" length="10" showInSummary="true">
+      <items style="Lookup" dataController="M_Localization" newDataView="createForm1" dataValueField="Locale_Code" dataTextField="Locale_Name" />
+    </field>
+    <field name="Locale_Locale_Name" type="String" readOnly="true" label="Locale Name" length="50" />
+    <field name="Country_Code" type="String" allowNulls="false" isPrimaryKey="true" label="Country Code" length="2" showInSummary="true">
+      <items style="Lookup" dataController="M_Country" newDataView="createForm1" dataValueField="Country_Code" dataTextField="Country_Name_Locale" />
+    </field>
+    <field name="Country_Country_Name_Locale" type="String" readOnly="true" label="Country Name Locale" length="50" />
+    <field name="CreatedBy" type="String" label="Created By" length="128" showInSummary="true" />
+    <field name="CreatedOn" type="DateTime" label="Created On" showInSummary="true" />
+    <field name="ModifiedBy" type="String" label="Modified By" length="128" showInSummary="true" />
+    <field name="ModifiedOn" type="DateTime" label="Modified On" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="M Localization Country">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Locale_Code" aliasFieldName="Locale_Locale_Name" />
+        <dataField fieldName="Country_Code" aliasFieldName="Country_Country_Name_Locale" />
+        <dataField fieldName="CreatedBy" />
+        <dataField fieldName="CreatedOn" columns="10" />
+        <dataField fieldName="ModifiedBy" />
+        <dataField fieldName="ModifiedOn" columns="10" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review M Localization Country">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="M Localization Country" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Locale_Code" aliasFieldName="Locale_Locale_Name" />
+            <dataField fieldName="Country_Code" aliasFieldName="Country_Country_Name_Locale" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New M Localization Country">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New M Localization Country" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Locale_Code" aliasFieldName="Locale_Locale_Name" />
+            <dataField fieldName="Country_Code" aliasFieldName="Country_Country_Name_Locale" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+      <action id="a9" />
+      <action id="a10" commandName="BatchEdit" commandArgument="editForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

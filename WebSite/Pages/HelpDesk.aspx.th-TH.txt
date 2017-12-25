@@ -1,0 +1,11 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in HelpDesk.aspx project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_HelpDesk^Help Desk^Page_HelpDesk^
+
+^Page_Manage_HelpDesk^Manage Help Desk^Page_Manage_HelpDesk^
+

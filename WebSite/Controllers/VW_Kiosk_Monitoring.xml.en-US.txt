@@ -1,0 +1,29 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in VW_Kiosk_Monitoring.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Controllers_Kiosk_Monitor^Kiosk_Monitor^Controllers_Kiosk_Monitor^
+
+^Created_On^Created On^Created_On^
+
+^HD_Serial^HD Serial^HD_Serial^
+
+^Img_Status^Image Status^Img_Status^
+
+^IP_Address^IP Address^IP_Address^
+
+^Kiosk_Code^Kiosk Code^Kiosk_Code^
+
+^Kiosk_Name^Kiosk Name^Kiosk_Name^
+
+^Location_Address^Location Address^Location_Address^
+
+^Mac_Address^Mac Address^Mac_Address^
+
+^Modified_On^Modified On^Modified_On^
+
+^Status^Status^Status^
+

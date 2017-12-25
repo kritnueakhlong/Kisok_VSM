@@ -1,0 +1,33 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in M_Kiosk.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Controller_ManageKiosk^Manage Kiosk^Controller_ManageKiosk^
+
+^Created_By^Created By^Created_By^
+
+^Created_On^Created On^Created_On^
+
+^HD_Serial^HD Serial^HD_Serial^
+
+^IP_Address^IP Address^IP_Address^
+
+^Kiosk_Code^Kiosk Code^Kiosk_Code^
+
+^Kiosk_Name^Kiosk Name^Kiosk_Name^
+
+^Kiosk_Type_Name^Kiosk Type^Kiosk_Type_Name^
+
+^KioskType_Code^ประเภทตู้ kiosk^KioskType_Code^
+
+^Location_Address^Location Address^Location_Address^
+
+^Mac_Address^Mac Address^Mac_Address^
+
+^Modified_By^Modified By^Modified_By^
+
+^Modified_On^Modified On^Modified_On^
+

@@ -1,0 +1,9 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in M_System_Config.aspx project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_M_System_Config^Setting^Page_M_System_Config^
+

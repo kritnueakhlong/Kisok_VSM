@@ -1,0 +1,23 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in M_KioskOwner_Location.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Created_By^Created By^Created_By^
+
+^Created_On^Created On^Created_On^
+
+^Kiosk_Owner^Kiosk Owner^Kiosk_Owner^
+
+^Location_Address^Location Address^Location_Address^
+
+^Location_LAT^Location LAT^Location_LAT^
+
+^Location_LONG^Location LONG^Location_LONG^
+
+^Modified_By^Modified By^Modified_By^
+
+^Modified_On^Modified On^Modified_On^
+

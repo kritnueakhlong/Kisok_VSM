@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Employee" conflictDetection="overwriteChanges" label="Employee" plugIn="VSM.Data.AnnotationPlugIn" handler="VSM.Rules.EmployeeBusinessRules" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[select
+	"Employee"."emp_id" "emp_id"
+	,"Employee"."emp_code" "emp_code"
+	,"Employee"."password" "password"
+	,"Employee"."emp_fname" "emp_fname"
+	,"Employee"."emp_lname" "emp_lname"
+	,"Employee"."emp_email" "emp_email"
+	,"Employee"."team_id" "team_id"
+	,"Employee"."telephone" "telephone"
+	,"KioskOwner_"."KioskOwner_ID" "KioskOwner_ID"
+	,"KioskOwner_"."KioskOwner_Code" "KioskOwner_Code"
+	,"M_Kiosk_Owner_Branch_"."KioskOwner_Branch_ID" "KioskOwner_Branch_ID"
+	,"M_Kiosk_Owner_Branch_"."KioskOwner_Branch_Code" "KioskOwner_Branch_Code"
+	,"Employee"."CreatedBy" "CreatedBy"
+	,"Employee"."CreatedOn" "CreatedOn"
+	,"Employee"."ModifiedBy" "ModifiedBy"
+	,"Employee"."ModifiedOn" "ModifiedOn"
+from "dbo"."Employee" "Employee"
+	left join "dbo"."M_Kiosk_Owner" "KioskOwner_" on "KioskOwner_"."KioskOwner_ID" = "Employee"."KioskOwner_ID"
+	left join "dbo"."M_Kiosk_Owner_Branch" "M_Kiosk_Owner_Branch_" on "Employee"."KioskOwner_Branch_ID" = "M_Kiosk_Owner_Branch_"."KioskOwner_Branch_ID"]]></text>
+    </command>
+    <command id="emp_idUniqueIdentifierCommand" type="Text" event="Inserting">
+      <text><![CDATA[select newid()]]></text>
+      <output>
+        <fieldOutput fieldName="emp_id" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="emp_id" type="Guid" allowNulls="false" isPrimaryKey="true" default="(newid())" label="Emp#" />
+    <field name="emp_code" type="String" label="^EmpCode^รหัสพนักงาน^EmpCode^" length="10" showInSummary="true" allowNulls="false" />
+    <field name="password" type="String" allowNulls="false" label="^Password^รหัสผ่าน^Password^" length="128" />
+    <field name="emp_fname" type="String" label="^EmpFname^ชื่อพนักงาน^EmpFname^" length="50" showInSummary="true" />
+    <field name="emp_lname" type="String" label="^EmpLname^นามสกุลพนักงาน^EmpLname^" length="50" showInSummary="true" />
+    <field name="emp_email" type="String" allowNulls="false" label="^EmpEmail^อีเมล์^EmpEmail^" length="128" showInSummary="true" />
+    <field name="team_id" type="Int32" label="Team#" showInSummary="true" />
+    <field name="telephone" type="String" label="^Telephone^หมายเลขโทรศัพท์^Telephone^" length="20" />
+    <field name="KioskOwner_ID" type="Guid" allowNulls="false" label="Kiosk Owner#">
+      <items dataController="M_Kiosk_Owner" dataValueField="KioskOwner_ID" dataTextField="KioskOwner_Code" style="Lookup" />
+    </field>
+    <field name="KioskOwner_Code" type="String" readOnly="true" label="Kiosk Owner Code" length="10" />
+    <field name="KioskOwner_Branch_ID" type="Guid" label="Kiosk Owner Branch#">
+      <items style="Lookup" dataController="M_Kiosk_Owner_Branch" dataValueField="KioskOwner_Branch_ID" />
+    </field>
+    <field name="KioskOwner_Branch_Code" type="String" readOnly="true" label="Kiosk Owner Branch Code" length="10" />
+    <field name="CreatedBy" type="String" label="^Created_By^สร้างโดย^Created_By^" length="50" />
+    <field name="CreatedOn" type="DateTime" label="^Created_On^วันที่สร้าง^Created_On^" dataFormatString="dd/MM/yyyy HH:mm:ss" />
+    <field name="ModifiedBy" type="String" label="^Modified_By^แก้ไขโดย^Modified_By^" length="50" />
+    <field name="ModifiedOn" type="DateTime" label="^Modified_On^วันที่แก้ไข^Modified_On^" dataFormatString="dd/MM/yyyy HH:mm:ss" />
+    <field name="createname" type="String" allowNulls="false" label="^createname^ผู้สร้าง^createname^" allowQBE="false" allowSorting="false" htmlEncode="false" hidden="true" />
+    <field name="updatename" type="String" allowNulls="false" label="^updatename^ผู้แก้ไข^updatename^" allowQBE="false" allowSorting="false" htmlEncode="false" hidden="true" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="^Page_User_grid1^User^Page_User_grid1^">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="emp_code" columns="10" />
+        <dataField fieldName="emp_fname" columns="50" />
+        <dataField fieldName="emp_lname" columns="50" />
+        <dataField fieldName="emp_email" />
+        <dataField fieldName="team_id" columns="15" hidden="true" />
+        <dataField fieldName="telephone" columns="20" />
+        <dataField fieldName="KioskOwner_ID" aliasFieldName="KioskOwner_Code" />
+        <dataField fieldName="KioskOwner_Branch_ID" aliasFieldName="KioskOwner_Branch_Code" />
+        <dataField fieldName="CreatedBy" columns="50" />
+        <dataField fieldName="CreatedOn" columns="10" />
+        <dataField fieldName="createname" rows="5" hidden="true" />
+        <dataField fieldName="updatename" rows="5" hidden="true" />
+      </dataFields>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New User">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New Employee" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="emp_code" columns="10" />
+            <dataField fieldName="password" textMode="Password" />
+            <dataField fieldName="emp_fname" columns="50" />
+            <dataField fieldName="emp_lname" columns="50" />
+            <dataField fieldName="emp_email" />
+            <dataField fieldName="team_id" columns="15" hidden="true" />
+            <dataField fieldName="telephone" columns="20" />
+            <dataField fieldName="KioskOwner_ID" aliasFieldName="KioskOwner_Code" />
+            <dataField fieldName="KioskOwner_Branch_ID" aliasFieldName="KioskOwner_Branch_Code" />
+            <dataField fieldName="CreatedBy" columns="50" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" columns="50" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Employee">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Employee" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="emp_code" columns="10" readOnly="true" />
+            <dataField fieldName="password" textMode="Password" />
+            <dataField fieldName="emp_fname" columns="50" />
+            <dataField fieldName="emp_lname" columns="50" />
+            <dataField fieldName="emp_email" />
+            <dataField fieldName="team_id" columns="15" hidden="true" />
+            <dataField fieldName="telephone" columns="20" />
+            <dataField fieldName="KioskOwner_ID" aliasFieldName="KioskOwner_Code" />
+            <dataField fieldName="KioskOwner_Branch_ID" aliasFieldName="KioskOwner_Branch_Code" />
+            <dataField fieldName="CreatedBy" columns="50" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" columns="50" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+  <businessRules>
+    <rule id="r100" commandName="Update|Insert" type="Code" phase="Before" />
+  </businessRules>
+</dataController>

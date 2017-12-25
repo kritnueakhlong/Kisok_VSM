@@ -1,0 +1,767 @@
+<application snapshot="false" xmlns="urn:schemas-codeontime-com:data-aquarium-application" xmlns:m="urn:codeontime:data-map" xmlns:dm="urn:schemas-codeontime-com:data-model">
+  <pages xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+    <page name="Home" title="^HomeTitle^Start^HomeTitle^" description="^HomeDesc^Application home page^HomeDesc^" path="^HomePath^Home^HomePath^" style="HomePage" customStyle="Wide" index="1000">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewColumn" />
+      </containers>
+      <controls>
+        <control id="control1" name="TableOfContents" container="container1" />
+        <control id="control2" name="Welcome" container="container2" />
+      </controls>
+    </page>
+    <page name="M_Kiosk" title="M Kiosk" description="View M Kiosk" index="1010" path="M Kiosk">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Kiosk" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="M_Kiosk_Material" view="grid1" text="M Kiosk Material" filterSource="view1" container="container2" filterFields="Kiosk_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view3" controller="M_KioskGroup_KioskID" view="grid1" text="M Kiosk Group Kiosk#" filterSource="view1" container="container2" filterFields="Kiosk_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view4" controller="M_SSID_Kiosk" view="grid1" text="M SSID Kiosk" filterSource="view1" container="container2" filterFields="Kiosk_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view5" controller="T_Advertise_Kiosk" view="grid1" text="T Advertise Kiosk" filterSource="view1" container="container2" filterFields="Kiosk_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view6" controller="T_Contents_Kiosk" view="grid1" text="T Contents Kiosk" filterSource="view1" container="container2" filterFields="Kiosk_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view7" controller="T_Kiosk_Signal" view="grid1" text="T Kiosk Signal" filterSource="view1" container="container2" filterFields="Kiosk_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view8" controller="T_Kiosk_Usage" view="grid1" text="T Kiosk Usage" filterSource="view1" container="container2" filterFields="Kiosk_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m kiosk management.</about>
+    </page>
+    <page name="M_Kiosk_Material" title="M Kiosk Material" description="View M Kiosk Material" index="1020" path="M Kiosk | M Kiosk Material">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Kiosk_Material" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m kiosk material management.</about>
+    </page>
+    <page name="M_KioskGroup_KioskID" title="M Kiosk Group Kiosk#" description="View M Kiosk Group Kiosk#" index="1030" path="M Kiosk | M Kiosk Group Kiosk#">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_KioskGroup_KioskID" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m kiosk group kiosk# management.</about>
+    </page>
+    <page name="M_SSID_Kiosk" title="M SSID Kiosk" description="View M SSID Kiosk" index="1040" path="M Kiosk | M SSID Kiosk">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_SSID_Kiosk" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m ssid kiosk management.</about>
+    </page>
+    <page name="T_Advertise_Kiosk" title="T Advertise Kiosk" description="View T Advertise Kiosk" index="1050" path="M Kiosk | T Advertise Kiosk">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="T_Advertise_Kiosk" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows t advertise kiosk management.</about>
+    </page>
+    <page name="T_Contents_Kiosk" title="T Contents Kiosk" description="View T Contents Kiosk" index="1060" path="M Kiosk | T Contents Kiosk">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="T_Contents_Kiosk" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows t contents kiosk management.</about>
+    </page>
+    <page name="T_Kiosk_Signal" title="T Kiosk Signal" description="View T Kiosk Signal" index="1070" path="M Kiosk | T Kiosk Signal">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="T_Kiosk_Signal" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows t kiosk signal management.</about>
+    </page>
+    <page name="T_Kiosk_Usage" title="T Kiosk Usage" description="View T Kiosk Usage" index="1080" path="M Kiosk | T Kiosk Usage">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="T_Kiosk_Usage" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows t kiosk usage management.</about>
+    </page>
+    <page name="M_Kiosk_Owner" title="M Kiosk Owner" description="View M Kiosk Owner" index="1090" path="M Kiosk Owner">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Kiosk_Owner" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="M_Kiosk" view="grid1" text="M Kiosk" filterSource="view1" container="container2" filterFields="KioskOwner_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view3" controller="T_Advertise" view="grid1" text="T Advertise" filterSource="view1" container="container2" filterFields="KioskOwner_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view4" controller="T_Contents" view="grid1" text="T Contents" filterSource="view1" container="container2" filterFields="KioskOwner_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view5" controller="M_SSID" view="grid1" text="M Ssid" filterSource="view1" container="container2" filterFields="KioskOwner_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view6" controller="M_KioskOwner_Config" view="grid1" text="M Kiosk Owner Config" filterSource="view1" container="container2" filterFields="KioskOwner_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view7" controller="T_Kiosk_Owner_MA" view="grid1" text="T Kiosk Owner MA" filterSource="view1" container="container2" filterFields="KioskOwner_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m kiosk owner management.</about>
+    </page>
+    <page name="T_Advertise" title="T Advertise" description="View T Advertise" index="1100" path="M Kiosk Owner | T Advertise">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="T_Advertise" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="T_Advertise_Kiosk" view="grid1" text="T Advertise Kiosk" filterSource="view1" container="container2" filterFields="Advertise_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view3" controller="T_Advertise_KioskGroup" view="grid1" text="T Advertise Kiosk Group" filterSource="view1" container="container2" filterFields="Advertise_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows t advertise management.</about>
+    </page>
+    <page name="T_Advertise_KioskGroup" title="T Advertise Kiosk Group" description="View T Advertise Kiosk Group" index="1110" path="M Kiosk Owner | T Advertise | T Advertise Kiosk Group">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="T_Advertise_KioskGroup" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows t advertise kiosk group management.</about>
+    </page>
+    <page name="T_Contents" title="T Contents" description="View T Contents" index="1120" path="M Kiosk Owner | T Contents">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="T_Contents" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="T_Contents_Kiosk" view="grid1" text="T Contents Kiosk" filterSource="view1" container="container2" filterFields="Content_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view3" controller="T_Contents_KioskGroup" view="grid1" text="T Contents Kiosk Group" filterSource="view1" container="container2" filterFields="Content_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows t contents management.</about>
+    </page>
+    <page name="T_Contents_KioskGroup" title="T Contents Kiosk Group" description="View T Contents Kiosk Group" index="1130" path="M Kiosk Owner | T Contents | T Contents Kiosk Group">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="T_Contents_KioskGroup" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows t contents kiosk group management.</about>
+    </page>
+    <page name="M_SSID" title="M Ssid" description="View M Ssid" index="1140" path="M Kiosk Owner | M Ssid">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_SSID" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="M_SSID_Kiosk" view="grid1" text="M SSID Kiosk" filterSource="view1" container="container2" filterFields="SSID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m ssid management.</about>
+    </page>
+    <page name="M_KioskOwner_Config" title="M Kiosk Owner Config" description="View M Kiosk Owner Config" index="1150" path="M Kiosk Owner | M Kiosk Owner Config">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_KioskOwner_Config" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m kiosk owner config management.</about>
+    </page>
+    <page name="T_Kiosk_Owner_MA" title="T Kiosk Owner MA" description="View T Kiosk Owner MA" index="1160" path="M Kiosk Owner | T Kiosk Owner MA">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="T_Kiosk_Owner_MA" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows t kiosk owner ma management.</about>
+    </page>
+    <page name="M_Country" title="M Country" description="View M Country" index="1170" path="M Country">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Country" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="Base_Customer" view="grid1" text="Base Customer" filterSource="view1" container="container2" filterFields="Country_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view3" controller="M_Localization" view="grid1" text="M Localization" filterSource="view1" container="container2" filterFields="Country_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view4" controller="T_Kiosk_Usage" view="grid1" text="T Kiosk Usage" filterSource="view1" container="container2" filterFields="Country_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m country management.</about>
+    </page>
+    <page name="Base_Customer" title="Base Customer" description="View Base Customer" index="1180" path="M Country | Base Customer">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Base_Customer" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="Base_Customer_Authentication" view="grid1" text="Base Customer Authentication" filterSource="view1" container="container2" filterFields="Customer_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows base customer management.</about>
+    </page>
+    <page name="Base_Customer_Authentication" title="Base Customer Authentication" description="View Base Customer Authentication" index="1190" path="M Country | Base Customer | Base Customer Authentication">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Base_Customer_Authentication" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows base customer authentication management.</about>
+    </page>
+    <page name="M_Localization" title="M Localization" description="View M Localization" index="1200" path="M Country | M Localization">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Localization" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="M_Usage_Status" view="grid1" text="M Usage Status" filterSource="view1" container="container2" filterFields="Locale_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m localization management.</about>
+    </page>
+    <page name="M_Usage_Status" title="M Usage Status" description="View M Usage Status" index="1210" path="M Country | M Localization | M Usage Status">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Usage_Status" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m usage status management.</about>
+    </page>
+    <page name="M_IDentify_Document" title="M I Dentify Document" description="View M I Dentify Document" index="1220" path="M I Dentify Document">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_IDentify_Document" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="Base_Customer" view="grid1" text="Base Customer" filterSource="view1" container="container2" filterFields="IdenDoc_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view3" controller="Base_Customer_Authentication" view="grid1" text="Base Customer Authentication" filterSource="view1" container="container2" filterFields="Customer_IdenDoc_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view4" controller="T_Kiosk_Usage" view="grid1" text="T Kiosk Usage" filterSource="view1" container="container2" filterFields="IdenDoc_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m i dentify document management.</about>
+    </page>
+    <page name="M_KioskGroup" title="M Kiosk Group" description="View M Kiosk Group" index="1230" path="M Kiosk Group">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_KioskGroup" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="M_KioskGroup_KioskID" view="grid1" text="M Kiosk Group Kiosk#" filterSource="view1" container="container2" filterFields="KioskGroup_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view3" controller="T_Advertise_KioskGroup" view="grid1" text="T Advertise Kiosk Group" filterSource="view1" container="container2" filterFields="KioskGroup_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view4" controller="T_Contents_KioskGroup" view="grid1" text="T Contents Kiosk Group" filterSource="view1" container="container2" filterFields="KioskGroup_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m kiosk group management.</about>
+    </page>
+    <page name="M_Config_Type" title="M Config Type" description="View M Config Type" index="1240" path="M Kiosk Group | M Config Type">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Config_Type" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="M_System_Config" view="grid1" text="M System Config" filterSource="view1" container="container2" filterFields="ConfigType_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view3" controller="M_KioskOwner_Config" view="grid1" text="M Kiosk Owner Config" filterSource="view1" container="container2" filterFields="Config_ConfigType_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m config type management.</about>
+    </page>
+    <page name="M_System_Config" title="M System Config" description="View M System Config" index="1250" path="M Kiosk Group | M Config Type | M System Config">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_System_Config" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="M_KioskOwner_Config" view="grid1" text="M Kiosk Owner Config" filterSource="view1" container="container2" filterFields="Config_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m system config management.</about>
+    </page>
+    <page name="M_Material_Type" title="M Material Type" description="View M Material Type" index="1260" path="M Kiosk Group | M Material Type">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Material_Type" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="M_Material" view="grid1" text="M Material" filterSource="view1" container="container2" filterFields="MaterType_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view3" controller="M_Kiosk_Material" view="grid1" text="M Kiosk Material" filterSource="view1" container="container2" filterFields="Mater_MaterType_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m material type management.</about>
+    </page>
+    <page name="M_Material" title="M Material" description="View M Material" index="1270" path="M Kiosk Group | M Material Type | M Material">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Material" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="M_Kiosk_Material" view="grid1" text="M Kiosk Material" filterSource="view1" container="container2" filterFields="Mater_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m material management.</about>
+    </page>
+    <page name="M_Generate_By" title="M Generate By" description="View M Generate By" index="1280" path="M Kiosk Group | M Generate By">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Generate_By" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="Base_Customer" view="grid1" text="Base Customer" filterSource="view1" container="container2" filterFields="GenBy_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m generate by management.</about>
+    </page>
+    <page name="M_Kiosk_Type" title="M Kiosk Type" description="View M Kiosk Type" index="1290" path="M Kiosk Group | M Kiosk Type">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Kiosk_Type" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="M_Kiosk" view="grid1" text="M Kiosk" filterSource="view1" container="container2" filterFields="KioskType_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m kiosk type management.</about>
+    </page>
+    <page name="M_Radius_Server" title="M Radius Server" description="View M Radius Server" index="1300" path="M Kiosk Group | M Radius Server">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" style="padding-top:8px" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Radius_Server" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="M_SSID" view="grid1" text="M Ssid" filterSource="view1" container="container2" filterFields="RadiusServer_Code" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m radius server management.</about>
+    </page>
+    <page name="T_Customer_Blacklist" title="T Customer Blacklist" description="View T Customer Blacklist" index="1310" path="M Kiosk Group | T Customer Blacklist">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="T_Customer_Blacklist" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows t customer blacklist management.</about>
+    </page>
+    <page name="AllReports" title="^ReportsPath^Reports^ReportsPath^" externalUrl="about:blank" index="1320" path="^ReportsPath^Reports^ReportsPath^" />
+    <page name="VW_Advertise" title="VW Advertise" description="View VW Advertise" index="1330" path="^ReportsPath^Reports^ReportsPath^ | VW Advertise">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="VW_Advertise" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows vw advertise management.</about>
+    </page>
+    <page name="VW_Fields_Description" title="VW Fields Description" description="View VW Fields Description" index="1340" path="^ReportsPath^Reports^ReportsPath^ | VW Fields Description">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="VW_Fields_Description" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows vw fields description management.</about>
+    </page>
+    <page name="Membership" title="^MembershipTitle^Membership Manager^MembershipTitle^" description="^MembershipDesc^User and role manager^MembershipDesc^" roles="Administrators" path="^MembershipPath^Membership^MembershipPath^" style="UsersPage" index="1350">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <about>^MembershipAbout^This page allows to manage roles and users.^MembershipAbout^</about>
+      <controls>
+        <control id="control1" name="MembershipManager" container="container1" />
+      </controls>
+    </page>
+    <page name="p570522015338" title="New Pages" externalUrl="about:blank" index="1450" path="New Pages" />
+    <page name="M_Localization_Country" title="M Localization Country" description="View M Localization Country" index="1550" path="New Pages | M Localization Country" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Localization_Country" view="grid1" showInSummary="true" container="container1" activator="Tab" text="M Localization Country" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m localization country management.</about>
+    </page>
+    <page name="p570522033920" title="New Pages" externalUrl="about:blank" index="1650" path="New Pages" />
+    <page name="M_Kiosk_Owner_Location" title="M Kiosk Owner Location" description="View M Kiosk Owner Location" index="1750" path="New Pages | M Kiosk Owner Location" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Kiosk_Owner_Location" view="grid1" showInSummary="true" container="container1" activator="Tab" text="M Kiosk Owner Location" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m kiosk owner location management.</about>
+    </page>
+    <page name="p570523034110" title="New Pages" externalUrl="about:blank" index="1850" path="New Pages" />
+    <page name="M_KioskOwner_Location" title="M Kiosk Owner Location" description="View M Kiosk Owner Location" index="1950" path="New Pages | M Kiosk Owner Location" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_KioskOwner_Location" view="grid1" showInSummary="true" container="container1" activator="Tab" text="M Kiosk Owner Location" multiSelect="true" />
+        <dataView id="view2" controller="M_Kiosk" view="grid1" text="M Kiosk" filterSource="view1" container="container1" filterFields="Location_ID" activator="Tab" autoHide="Self" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m kiosk owner location management.</about>
+    </page>
+    <page name="M_KioskOwner_Radius_Connection" title="M Kiosk Owner Radius Connection" description="View M Kiosk Owner Radius Connection" index="2050" path="New Pages | M Kiosk Owner Radius Connection" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_KioskOwner_Radius_Connection" view="grid1" showInSummary="true" container="container1" activator="Tab" text="M Kiosk Owner Radius Connection" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m kiosk owner radius connection management.</about>
+    </page>
+    <page name="T_KioskOwner_MA" title="T Kiosk Owner MA" description="View T Kiosk Owner MA" index="2150" path="New Pages | T Kiosk Owner MA" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="T_KioskOwner_MA" view="grid1" showInSummary="true" container="container1" activator="Tab" text="T Kiosk Owner MA" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows t kiosk owner ma management.</about>
+    </page>
+    <page name="p570523040233" title="New Pages" externalUrl="about:blank" index="2250" path="New Pages" />
+    <page name="Con_Condition_Group" title="Con Condition Group" description="View Con Condition Group" index="2350" path="New Pages | Con Condition Group" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Con_Condition_Group" view="grid1" showInSummary="true" container="container1" activator="Tab" text="Con Condition Group" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows con condition group management.</about>
+    </page>
+    <page name="Con_Condition_Group_Column" title="Con Condition Group Column" description="View Con Condition Group Column" index="2450" path="New Pages | Con Condition Group Column" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Con_Condition_Group_Column" view="grid1" showInSummary="true" container="container1" activator="Tab" text="Con Condition Group Column" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows con condition group column management.</about>
+    </page>
+    <page name="Con_Table_Column" title="Con Table Column" description="View Con Table Column" index="2550" path="New Pages | Con Table Column" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Con_Table_Column" view="grid1" showInSummary="true" container="container1" activator="Tab" text="Con Table Column" multiSelect="true" />
+        <dataView id="view2" controller="Con_Condition_Group_Column" view="grid1" text="Con Condition Group Column" filterSource="view1" container="container1" filterFields="TableColumn_ID" activator="Tab" autoHide="Self" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows con table column management.</about>
+    </page>
+    <page name="p570523064203" title="New Pages" externalUrl="about:blank" index="2650" path="New Pages" />
+    <page name="M_Interface" title="M Interface" description="View M Interface" index="2750" path="New Pages | M Interface" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Interface" view="grid1" showInSummary="true" container="container1" activator="Tab" text="M Interface" multiSelect="true" />
+        <dataView id="view2" controller="M_Radius_Server_Interface" view="grid1" text="M Radius Server Interface" filterSource="view1" container="container1" filterFields="Interface_Code" activator="Tab" autoHide="Self" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m interface management.</about>
+    </page>
+    <page name="M_Radius_Server_Interface" title="M Radius Server Interface" description="View M Radius Server Interface" index="2850" path="New Pages | M Radius Server Interface" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Radius_Server_Interface" view="grid1" showInSummary="true" container="container1" activator="Tab" text="M Radius Server Interface" multiSelect="true" />
+        <dataView id="view2" controller="M_KioskOwner_Radius_Connection" view="grid1" text="M Kiosk Owner Radius Connection" filterSource="view1" container="container1" filterFields="RadiusServer_Code,Interface_Code" activator="Tab" autoHide="Self" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m radius server interface management.</about>
+    </page>
+    <page name="p570623042305" title="New Pages" externalUrl="about:blank" index="2950" path="New Pages" />
+    <page name="VW_RPT_Register" title="VW RPT Register" description="View VW RPT Register" index="3050" path="New Pages | VW RPT Register" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="VW_RPT_Register" view="grid1" showInSummary="true" container="container1" activator="Tab" text="VW RPT Register" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows vw rpt register management.</about>
+    </page>
+    <page name="p570623053151" title="New Pages" externalUrl="about:blank" index="3150" path="New Pages" />
+    <page name="VW_RPT_OldCustomer" title="VW RPT Old Customer" description="View VW RPT Old Customer" index="3250" path="New Pages | VW RPT Old Customer" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="VW_RPT_OldCustomer" view="grid1" showInSummary="true" container="container1" activator="Tab" text="VW RPT Old Customer" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows vw rpt old customer management.</about>
+    </page>
+    <page name="p570625025455" title="New Pages" externalUrl="about:blank" index="3350" path="New Pages" />
+    <page name="VW_RPT_Kiosk_Error" title="VW RPT Kiosk Error" description="View VW RPT Kiosk Error" index="3450" path="New Pages | VW RPT Kiosk Error" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="VW_RPT_Kiosk_Error" view="grid1" showInSummary="true" container="container1" activator="Tab" text="VW RPT Kiosk Error" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows vw rpt kiosk error management.</about>
+    </page>
+    <page name="VW_RPT_Kiosk_Usage" title="VW RPT Kiosk Usage" description="View VW RPT Kiosk Usage" index="3550" path="New Pages | VW RPT Kiosk Usage" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="VW_RPT_Kiosk_Usage" view="grid1" showInSummary="true" container="container1" activator="Tab" text="VW RPT Kiosk Usage" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows vw rpt kiosk usage management.</about>
+    </page>
+    <page name="VW_RPT_Kiosk_Usage_Detail" title="VW RPT Kiosk Usage Detail" description="View VW RPT Kiosk Usage Detail" index="3650" path="New Pages | VW RPT Kiosk Usage Detail" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="VW_RPT_Kiosk_Usage_Detail" view="grid1" showInSummary="true" container="container1" activator="Tab" text="VW RPT Kiosk Usage Detail" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows vw rpt kiosk usage detail management.</about>
+    </page>
+    <page name="VW_RPT_Log_Kiosk" title="VW RPT Log Kiosk" description="View VW RPT Log Kiosk" index="3750" path="New Pages | VW RPT Log Kiosk" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="VW_RPT_Log_Kiosk" view="grid1" showInSummary="true" container="container1" activator="Tab" text="VW RPT Log Kiosk" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows vw rpt log kiosk management.</about>
+    </page>
+    <page name="VW_RPT_OldCustomer_Detail" title="VW RPT Old Customer Detail" description="View VW RPT Old Customer Detail" index="3850" path="New Pages | VW RPT Old Customer Detail" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="VW_RPT_OldCustomer_Detail" view="grid1" showInSummary="true" container="container1" activator="Tab" text="VW RPT Old Customer Detail" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows vw rpt old customer detail management.</about>
+    </page>
+    <page name="p570627040118" title="New Pages" externalUrl="about:blank" index="3950" path="New Pages" />
+    <page name="VW_Kiosk_Monitoring" title="VW Kiosk Monitoring" description="View VW Kiosk Monitoring" index="4050" path="New Pages | VW Kiosk Monitoring" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="VW_Kiosk_Monitoring" view="grid1" showInSummary="true" container="container1" activator="Tab" text="VW Kiosk Monitoring" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows vw kiosk monitoring management.</about>
+    </page>
+    <page name="p570728104708" title="New Pages" externalUrl="about:blank" index="4150" path="New Pages" />
+    <page name="Employee" title="Employee" description="View Employee" index="4250" path="New Pages | Employee" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Employee" view="grid1" showInSummary="true" container="container1" activator="Tab" text="Employee" multiSelect="true" />
+        <dataView id="view2" controller="Employee_Roles" view="grid1" text="Employee Roles" filterSource="view1" container="container1" filterFields="emp_id" activator="Tab" autoHide="Self" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows employee management.</about>
+    </page>
+    <page name="Employee_Roles" title="Employee Roles" description="View Employee Roles" index="4350" path="New Pages | Employee Roles" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Employee_Roles" view="grid1" showInSummary="true" container="container1" activator="Tab" text="Employee Roles" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows employee roles management.</about>
+    </page>
+    <page name="Roles" title="Roles" description="View Roles" index="4450" path="New Pages | Roles" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Roles" view="grid1" showInSummary="true" container="container1" activator="Tab" text="Roles" multiSelect="true" />
+        <dataView id="view2" controller="Employee_Roles" view="grid1" text="Employee Roles" filterSource="view1" container="container1" filterFields="roles_id" activator="Tab" autoHide="Self" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows roles management.</about>
+    </page>
+    <page name="p570806063941" title="New Pages" externalUrl="about:blank" index="4550" path="New Pages" />
+    <page name="Personnel" title="Personnel" description="View Personnel" index="4650" path="New Pages | Personnel" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Personnel" view="grid1" showInSummary="true" container="container1" activator="Tab" text="Personnel" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows personnel management.</about>
+    </page>
+    <page name="p570813100101" title="New Pages" externalUrl="about:blank" index="4750" path="New Pages" />
+    <page name="HelpDesk" title="Help Desk" description="View Help Desk" index="4850" path="New Pages | Help Desk" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="HelpDesk" view="grid1" showInSummary="true" container="container1" activator="Tab" text="Help Desk" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows help desk management.</about>
+    </page>
+    <page name="p570922035426" title="New Pages" externalUrl="about:blank" index="4950" path="New Pages" />
+    <page name="M_Kiosk_Owner_Branch" title="M Kiosk Owner Branch" description="View M Kiosk Owner Branch" index="5050" path="New Pages | M Kiosk Owner Branch" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="M_Kiosk_Owner_Branch" view="grid1" showInSummary="true" container="container1" activator="Tab" text="M Kiosk Owner Branch" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows m kiosk owner branch management.</about>
+    </page>
+    <page name="p601222020553" title="New Pages" externalUrl="about:blank" index="5150" path="New Pages" />
+    <page name="T_EmpRegis_Usage" title="T Emp Regis Usage" description="View T Emp Regis Usage" index="5250" path="New Pages | T Emp Regis Usage" xmlns="urn:schemas-codeontime-com:data-aquarium-application">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="T_EmpRegis_Usage" view="grid1" showInSummary="true" container="container1" activator="Tab" text="T Emp Regis Usage" multiSelect="true" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows t emp regis usage management.</about>
+    </page>
+  </pages>
+  <userControls>
+    <userControl name="TableOfContents" prefix="uc" generate="Always">
+      <body>
+                
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;div class="ParaInfo"&gt;
+        ^TocInstruction^Please select a page link in the table of contents below.^TocInstruction^
+    &lt;/div&gt;
+    &lt;div class="ParaHeader"&gt;
+        ^TocHeader^Site Map^TocHeader^
+    &lt;/div&gt;
+    &lt;div data-role="placeholder" data-placeholder="site-map"&gt;&lt;/div&gt;
+
+    &lt;div id="app-sitemap" data-app-role="page" data-activator="Button|^TocHeader^Site Map^TocHeader^"&gt;
+        &lt;p&gt;
+            &lt;span&gt;^TocInstruction^Please select a page link in the table of contents below.^TocInstruction^&lt;/span&gt;
+        &lt;/p&gt;
+        &lt;div data-app-role="sitemap"&gt;&lt;/div&gt;
+        &lt;p&gt;
+            &lt;br /&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+              </body>
+    </userControl>
+    <userControl name="Welcome" prefix="uc" generate="Always">
+      <body>
+                  
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;body&gt;
+                
+&lt;div style="padding-left:8px"&gt;&lt;div class="ParaInfo"&gt;
+        ^SignInInstruction^Sign in to access the protected site content.^SignInInstruction^&lt;/div&gt;
+&lt;div class="ParaHeader"&gt;
+    ^SignInHeader^Instructions^SignInHeader^
+&lt;/div&gt;
+&lt;div class="ParaText"&gt;
+    ^SignInPara1^Two standard user accounts are automatically created when application is initialized
+    if membership option has been selected for this application.^SignInPara1^
+&lt;/div&gt;
+&lt;div class="ParaText"&gt;
+    &lt;div style="border: solid 1px black; background-color: InfoBackground; padding: 8px;
+        float: left;"&gt;
+        ^AdminDesc^Administrative account^AdminDesc^:&lt;br /&gt;
+        &lt;b title="User Name"&gt;admin&lt;/b&gt; / &lt;b title="Password"&gt;admin123%&lt;/b&gt;
+        &lt;br /&gt;
+        &lt;br /&gt;
+        ^UserDesc^Standard user account^UserDesc^:&lt;br /&gt;
+        &lt;b title="User Name"&gt;user&lt;/b&gt; / &lt;b title="Password"&gt;user123%&lt;/b&gt;
+    &lt;/div&gt;
+    &lt;div style="clear:both;margin-bottom:8px"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="app-welcome" data-app-role="page" data-activator="Button|^SignInHeader^Instructions^SignInHeader^" data-activator-description="^SignInInstruction^Sign in to access the protected site content.^SignInInstruction^"&gt;
+      &lt;p&gt;^SignInInstruction^Sign in to access the protected site content.^SignInInstruction^&lt;/p&gt;
+      &lt;p&gt;
+          ^SignInPara1^Two standard user accounts are automatically created when application is initialized
+  if membership option has been selected for this application.^SignInPara1^
+      &lt;/p&gt;
+
+      &lt;p&gt;
+          ^SignInPara2^The administrative account &lt;b&gt;admin&lt;/b&gt; is authorized to access all areas of the
+  web site and membership manager. The standard &lt;b&gt;user&lt;/b&gt; account is allowed to
+  access all areas of the web site with the exception of membership manager.^SignInPara2^
+      &lt;/p&gt;
+      &lt;p&gt;
+          ^AdminDesc^Administrative account^AdminDesc^:&lt;br /&gt;
+          &lt;b title="User Name"&gt;admin&lt;/b&gt; / &lt;b title="Password"&gt;admin123%&lt;/b&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+          ^UserDesc^Standard user account^UserDesc^:&lt;br /&gt;
+          &lt;b title="User Name"&gt;user&lt;/b&gt; / &lt;b title="Password"&gt;user123%&lt;/b&gt;
+      &lt;/p&gt;
+      &lt;p&gt;&lt;a href="#" data-role="button" data-inline="true" data-theme="b" data-app-role="loginstatus" data-icon="lock"&gt;Login Status&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+                  
+&lt;/body&gt;
+&lt;/html&gt;
+                </body>
+    </userControl>
+  </userControls>
+</application>

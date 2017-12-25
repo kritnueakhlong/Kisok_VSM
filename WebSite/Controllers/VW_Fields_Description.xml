@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="VW_Fields_Description" conflictDetection="overwriteChanges" label="VW Fields Description" plugIn="VSM.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"VW_Fields_Description"."object_schema" "object_schema"
+	,"VW_Fields_Description"."object_name" "object_name"
+	,"VW_Fields_Description"."column_name" "column_name"
+	,"VW_Fields_Description"."data_type" "data_type"
+	,"VW_Fields_Description"."column_label" "column_label"
+	,"VW_Fields_Description"."major_id" "major_id"
+	,"VW_Fields_Description"."minor_id" "minor_id"
+	,"VW_Fields_Description"."major_minor" "major_minor"
+from "dbo"."VW_Fields_Description" "VW_Fields_Description"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="object_schema" type="String" label="Object Schema" readOnly="true" length="128" showInSummary="true" />
+    <field name="object_name" type="String" label="Object Name" readOnly="true" length="128" showInSummary="true" />
+    <field name="column_name" type="String" label="Column Name" readOnly="true" length="128" showInSummary="true" />
+    <field name="data_type" type="String" label="Data Type" readOnly="true" length="128" showInSummary="true" />
+    <field name="column_label" type="Object" label="Column Label" showInSummary="true" />
+    <field name="major_id" type="Int32" allowNulls="false" label="Major#" />
+    <field name="minor_id" type="Int32" allowNulls="false" label="Minor#" />
+    <field name="major_minor" type="Int32" label="Major Minor" readOnly="true" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="VW Fields Description" filter="object_name='Base_Customer'">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="object_schema" />
+        <dataField fieldName="object_name" />
+        <dataField fieldName="column_name" />
+        <dataField fieldName="data_type" />
+        <dataField fieldName="column_label" columns="15" />
+        <dataField fieldName="major_minor" columns="15" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review VW Fields Description">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="VW Fields Description" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="object_schema" />
+            <dataField fieldName="object_name" />
+            <dataField fieldName="column_name" />
+            <dataField fieldName="data_type" />
+            <dataField fieldName="column_label" columns="15" />
+            <dataField fieldName="major_id" columns="15" />
+            <dataField fieldName="minor_id" columns="15" />
+            <dataField fieldName="major_minor" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New VW Fields Description">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New VW Fields Description" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="column_label" columns="15" />
+            <dataField fieldName="major_id" columns="15" />
+            <dataField fieldName="minor_id" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+      <action id="a9" />
+      <action id="a10" commandName="BatchEdit" commandArgument="editForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

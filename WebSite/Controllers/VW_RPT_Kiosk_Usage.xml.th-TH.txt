@@ -1,0 +1,25 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in VW_RPT_Kiosk_Usage.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Amount^จำนวน(ครั้ง)^Amount^
+
+^Controller_KioskUsage_Report^รายงานการใช้งาน kiosk ตามจุดต่างๆ^Controller_KioskUsage_Report^
+
+^HD_Serial^หมายเลขฮาร์ดดิส^HD_Serial^
+
+^IP_Address^หมายเลข IP address^IP_Address^
+
+^Kiosk_Code^รหัสตู้ kiosk^Kiosk_Code^
+
+^Kiosk_Name^ชื่อตู้ kiosk^Kiosk_Name^
+
+^KioskType_Code^ประเภทตู้ kiosk^KioskType_Code^
+
+^Location_Address^สถานที่ตั้งตู้ Kiosk^Location_Address^
+
+^Mac_Address^หมายเลข Mac address^Mac_Address^
+

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="M_Config_Type" conflictDetection="overwriteChanges" label="M Config Type" plugIn="VSM.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"M_Config_Type"."ConfigType_Code" "ConfigType_Code"
+	,"M_Config_Type"."ConfigType_Name" "ConfigType_Name"
+	,"M_Config_Type"."Item_Flag" "Item_Flag"
+	,"M_Config_Type"."CreatedBy" "CreatedBy"
+	,"M_Config_Type"."CreatedOn" "CreatedOn"
+	,"M_Config_Type"."ModifiedBy" "ModifiedBy"
+	,"M_Config_Type"."ModifiedOn" "ModifiedOn"
+from "dbo"."M_Config_Type" "M_Config_Type"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="ConfigType_Code" type="String" allowNulls="false" isPrimaryKey="true" label="^Config_Type_Code^รหัสประเภท^Config_Type_Code^" length="5" showInSummary="true" />
+    <field name="ConfigType_Name" type="String" allowNulls="false" label="^Config_Type_Name^ชื่อประเภท^Config_Type_Name^" length="50" showInSummary="true" />
+    <field name="Item_Flag" type="Boolean" default="((1))" label="Item Flag" showInSummary="true" hidden="true" />
+    <field name="CreatedBy" type="String" label="^Created_By^สร้างโดย^Created_By^" length="128" showInSummary="true" />
+    <field name="CreatedOn" type="DateTime" label="^Created_On^วันที่สร้าง^Created_On^" readOnly="true" dataFormatString="dd/MM/yyyy HH:mm:ss" />
+    <field name="ModifiedBy" type="String" label="^Modified_By^แก้ไขโดย^Modified_By^" length="128" />
+    <field name="ModifiedOn" type="DateTime" label="^Modified_On^วันที่แก้ไข^Modified_On^" readOnly="true" dataFormatString="dd/MM/yyyy HH:mm:ss" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="^Controller_M_Config_Type^ประเภทการตั้งค่า^Controller_M_Config_Type^">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="ConfigType_Code" columns="5" />
+        <dataField fieldName="ConfigType_Name" columns="50" />
+        <dataField fieldName="Item_Flag" hidden="true" />
+        <dataField fieldName="CreatedBy" />
+        <dataField fieldName="CreatedOn" columns="10" />
+        <dataField fieldName="ModifiedBy" />
+        <dataField fieldName="ModifiedOn" columns="10" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review M Config Type">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="M Config Type" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ConfigType_Code" columns="5" />
+            <dataField fieldName="ConfigType_Name" columns="50" />
+            <dataField fieldName="Item_Flag" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New M Config Type">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New M Config Type" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ConfigType_Code" columns="5" />
+            <dataField fieldName="ConfigType_Name" columns="50" />
+            <dataField fieldName="Item_Flag" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid" />
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

@@ -1,0 +1,11 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in M_Config_Type.html project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^M_System_Config_View^Setting^M_System_Config_View^
+
+^Page_M_Config_Type^ประเภทการตั้งค่า^Page_M_Config_Type^
+

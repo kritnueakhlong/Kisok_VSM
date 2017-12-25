@@ -1,0 +1,57 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in Web.Sitemap project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^HomeDesc^หน้าแรกของแอพลิเคชัน^HomeDesc^
+
+^HomePath^หน้าแรก^HomePath^
+
+^MembershipDesc^จัดการผู้ใช้และบทบาท^MembershipDesc^
+
+^MembershipPath^ผู้ใช้ระบบ^MembershipPath^
+
+^ReportsPath^รายงาน^ReportsPath^
+
+^Site_Customer_Blacklist^รายการห้ามผู้ใช้งาน^Site_Customer_Blacklist^
+
+^Site_EditUser^แก้ไขผู้ใช้^Site_EditUser^
+
+^Site_HelpDesk^ผู้ช่วย^Site_HelpDesk^
+
+^Site_Home^หน้าหลัก^Site_Home^
+
+^Site_Kiosk^Kiosk^Site_Kiosk^
+
+^Site_Kiosk_Monitor^สถานะตู้ Kiosk^Site_Kiosk_Monitor^
+
+^Site_Kiosk_Monitoring^ตรวจสอบสถานะตู้ Kiosk^Site_Kiosk_Monitoring^
+
+^Site_KioskError_Report^รายงานปัญหาการใช้งาน^Site_KioskError_Report^
+
+^Site_KioskUsage_Report^รายงานการใช้งาน kiosk ตามจุดต่างๆ^Site_KioskUsage_Report^
+
+^Site_LogKiosk_Report^รายงานประวัติการใช้งานตู้ Kiosk^Site_LogKiosk_Report^
+
+^Site_M_Config_Type^ประเภทการตั้งค่า^Site_M_Config_Type^
+
+^Site_M_System_Config^ตั้งค่า^Site_M_System_Config^
+
+^Site_Manage_HelpDesk^จัดการผู้ช่วย^Site_Manage_HelpDesk^
+
+^Site_ManageKiosk^จัดการตู้ Kiosk^Site_ManageKiosk^
+
+^Site_Member^ผู้ใช้ระบบ^Site_Member^
+
+^Site_OldCust_Report^รายงานการขอใช้งานลูกค้าเก่า^Site_OldCust_Report^
+
+^Site_Register_Report^รายงานการลงทะเบียนใหม่^Site_Register_Report^
+
+^Site_Roles^จัดการกลุ่มผู้ใช้^Site_Roles^
+
+^Site_User^จัดการผู้ใช้^Site_User^
+
+^SiteHome^หน้าแรก^SiteHome^
+

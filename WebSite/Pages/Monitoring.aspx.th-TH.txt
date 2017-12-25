@@ -1,0 +1,9 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in Monitoring.aspx project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_Kiosk_Monitoring^ตรวจสอบสถานะตู้ Kiosk^Page_Kiosk_Monitoring^
+

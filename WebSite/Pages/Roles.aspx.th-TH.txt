@@ -1,0 +1,11 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in Roles.aspx project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_Roles^จัดการกลุ่มผู้ใช้^Page_Roles^
+
+^Page_Roles_view1^กลุ่มผู้ใช้^Page_Roles_view1^
+

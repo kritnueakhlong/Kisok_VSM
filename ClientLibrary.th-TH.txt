@@ -1,0 +1,1135 @@
+***********************************************************************************
+This file is not required to execute your application and does not have to be
+deployed to production server.
+
+Code On Time generator uses this file to maintain AJAX Client Library resource 
+strings. Replace the text between localization brackets as needed and 
+re-generate your application. Refresh the browser cache to ensure that the latest 
+client library resource scripts are being used when application starts.
+
+Help us to improve the client library resources. We ask you to kindly contribute
+localized resource files to Code On Time community. 
+
+Simply send the resource files as attachments to customerservice@codeontime.com and 
+we will include your resource file(s) in the general distribution of the code 
+generation library.
+************************************************************************************
+
+^About^เกี่ยวกับ^About^
+
+^Accent^Accent^Accent^
+
+^ActionBarActionsHeaderText^การกระทำ^ActionBarActionsHeaderText^
+
+^ActionBarCancelActionHeaderText^ยกเลิก^ActionBarCancelActionHeaderText^
+
+^ActionBarCancelWhenEditActionDescription^ยกเลิกการเปลี่ยนแปลงการบันทึกทั้งหมด^ActionBarCancelWhenEditActionDescription^
+
+^ActionBarCancelWhenNewActionDescription^ยกเลิกการบันทึกใหม่^ActionBarCancelWhenNewActionDescription^
+
+^ActionBarInsertActionDescription^บันทึกบันทึกใหม่ไปยังฐานข้อมูล^ActionBarInsertActionDescription^
+
+^ActionBarInsertActionHeaderText^บันทึก^ActionBarInsertActionHeaderText^
+
+^ActionBarNewHeaderDescription^สร้างระเบียนใหม่ {0}^ActionBarNewHeaderDescription^
+
+^ActionBarNewHeaderText^{0} ใหม่^ActionBarNewHeaderText^
+
+^ActionBarNewHeaderText2^ใหม่^ActionBarNewHeaderText2^
+
+^ActionBarRecordHeaderText^บันทึก^ActionBarRecordHeaderText^
+
+^ActionBarReportHeaderText^รายงาน^ActionBarReportHeaderText^
+
+^ActionBarUpdateActionDescription^บันทึกการเปลี่ยนแปลงไปยังฐานข้อมูล^ActionBarUpdateActionDescription^
+
+^ActionBarUpdateActionHeaderText^บันทึก^ActionBarUpdateActionHeaderText^
+
+^AddAccount^Add Account^AddAccount^
+
+^AddCondition^เพิ่มเงื่อนไข^AddCondition^
+
+^AddConditionText^เพิ่มเงื่อนไขการค้นหา^AddConditionText^
+
+^AddItem^Add Item^AddItem^
+
+^AddMatchingGroup^Add matching group^AddMatchingGroup^
+
+^AddSearchBarField^เขตข้อมูลการค้นหาเพิ่มเติม^AddSearchBarField^
+
+^AddSystemIdentity^Add System Identity^AddSystemIdentity^
+
+^AddToFavorites^เพิ่มในรายการโปรด^AddToFavorites^
+
+^AdvancedSearch^Advanced Search^AdvancedSearch^
+
+^AdvancedSearchInstruction^Enter conditions that must be matched and press search button.^AdvancedSearchInstruction^
+
+^After^หลังจากที่^After^
+
+^Agenda^Agenda^Agenda^
+
+^AlignedLeft^Aligned Left^AlignedLeft^
+
+^AlignedRight^Aligned Right^AlignedRight^
+
+^AllDatesInPreriod^วันที่ทั้งหมดในระยะเวลา^AllDatesInPreriod^
+
+^AlternativeView^เลือกมุมมองทางเลือกของข้อมูล^AlternativeView^
+
+^Always^Always^Always^
+
+^AnyValue^(any)^AnyValue^
+
+^Apply^Apply^Apply^
+
+^Apps^Apps^Apps^
+
+^Aquarium^Aquarium^Aquarium^
+
+^Auto^Auto^Auto^
+
+^AverageOf^Average of^AverageOf^
+
+^AvgAggregate^เฉลี่ย : {0}^AvgAggregate^
+
+^AvgAggregateToolTip^ค่าเฉลี่ยของ {0}^AvgAggregateToolTip^
+
+^Azure^Azure^Azure^
+
+^Back^กลับ^Back^
+
+^BackColor^สีกลับ^BackColor^
+
+^BatchEditActionHeaderText^แก้ไขเป็นกลุ่ม^BatchEditActionHeaderText^
+
+^BatchEdited^{0} updated^BatchEdited^
+
+^BatchEditInFormActionHeaderText^ชุดแก้ไข (แบบฟอร์ม)^BatchEditInFormActionHeaderText^
+
+^BatchUpdate^การปรับปรุง^BatchUpdate^
+
+^Before^ก่อนที่จะ^Before^
+
+^BeginsWith^เริ่มต้นด้วย^BeginsWith^
+
+^Belltown^Belltown^Belltown^
+
+^Berry^Berry^Berry^
+
+^Between^ระหว่าง^Between^
+
+^Bittersweet^Bittersweet^Bittersweet^
+
+^Blank^Blank^Blank^
+
+^BlankPassword^รหัสผ่านไม่สามารถที่ว่างเปล่า^BlankPassword^
+
+^BlankUserName^ชื่อผู้ใช้ต้องไม่ว่างเปล่า^BlankUserName^
+
+^BlankValue^(ว่าง)^BlankValue^
+
+^BlobDownloadHint^คลิกที่นี่เพื่อดาวน์โหลดไฟล์ต้นฉบับ^BlobDownloadHint^
+
+^BlobDownloadLink^ดาวน์โหลด^BlobDownloadLink^
+
+^Bold^กล้าหาญ^Bold^
+
+^BooleanFilterText^กรองตรรกะ^BooleanFilterText^
+
+^BooleanIsExpected^ค่าตรรกะเป็นที่คาดหวัง^BooleanIsExpected^
+
+^ButtonShapes^Button Shapes^ButtonShapes^
+
+^By^by^By^
+
+^Calendar^Calendar^Calendar^
+
+^Cancel^ยกเลิก^Cancel^
+
+^Cards^บัตร^Cards^
+
+^Cay^Cay^Cay^
+
+^ChangeYourLanguage^Change your language^ChangeYourLanguage^
+
+^Charts^Charts^Charts^
+
+^Citrus^Citrus^Citrus^
+
+^Classic^Classic^Classic^
+
+^ClearFilter^ล้างตัวกรองจาก {0}^ClearFilter^
+
+^ClearFilter2^Clear Filter^ClearFilter2^
+
+^ClearText^Clear Text^ClearText^
+
+^ClearToolTip^{0} ที่ชัดเจน^ClearToolTip^
+
+^Close^ปิด^Close^
+
+^Comfortable^Comfortable^Comfortable^
+
+^Compact^Compact^Compact^
+
+^Condensed^Condensed^Condensed^
+
+^ConfirmContinue^Continue?^ConfirmContinue^
+
+^ConfirmReload^Reload?^ConfirmReload^
+
+^ConnectionLost^การเชื่อมต่อเครือข่ายได้รับการสูญหาย ลองอีกครั้งหรือไม่^ConnectionLost^
+
+^Construct^Construct^Construct^
+
+^Contains^ประกอบด้วย^Contains^
+
+^Convention^Convention^Convention^
+
+^Copy^คัดลอก^Copy^
+
+^CountAggregate^Re : {0}^CountAggregate^
+
+^CountAggregateToolTip^นับจาก {0}^CountAggregateToolTip^
+
+^CountOf^Count of^CountOf^
+
+^CreateLink^สร้างการเชื่อมโยง^CreateLink^
+
+^CustomFilterOption^ตัวกรอง ...^CustomFilterOption^
+
+^Cut^ตัด^Cut^
+
+^DarkKnight^Dark Knight^DarkKnight^
+
+^DarkTheme^Dark^DarkTheme^
+
+^DataSheetActionDescription^รายการแสดงการใช้ sheet<br/>format ข้อมูล^DataSheetActionDescription^
+
+^DataSheetActionHeaderText^แสดง F ใน Data Sheet^DataSheetActionHeaderText^
+
+^DataWarning^The maximum number of items to process is {0:d}. Please apply a filter to reduce the number of items.^DataWarning^
+
+^Date^Date^Date^
+
+^DateFilterText^ตัวกรองวันที่^DateFilterText^
+
+^DateIsExpected^วันที่คาดว่าจะ^DateIsExpected^
+
+^DatesAMinAgo^a minute ago^DatesAMinAgo^
+
+^DatesInAMin^in a minute^DatesInAMin^
+
+^DatesInHour^in an hour^DatesInHour^
+
+^DatesInMin^in {0} min^DatesInMin^
+
+^DatesLast^Last^DatesLast^
+
+^DatesMinAgo^{0} min ago^DatesMinAgo^
+
+^DatesNext^Next^DatesNext^
+
+^DatesNow^Now^DatesNow^
+
+^DatesOneHour^an hour ago^DatesOneHour^
+
+^DateSortAscending^เร็วที่สุดด้านบน^DateSortAscending^
+
+^DateSortDescending^ล่าสุดด้านบน^DateSortDescending^
+
+^DatesSmart^Smart Dates^DatesSmart^
+
+^DatesToday^Today^DatesToday^
+
+^DatesTomorrow^Tomorrow^DatesTomorrow^
+
+^DatesYesterday^Yesterday^DatesYesterday^
+
+^Day^Day^Day^
+
+^DefaultCancelActionHeaderText^ปิด^DefaultCancelActionHeaderText^
+
+^DefaultCreateViewDescription^กรุณากรอกแบบฟอร์มนี้และคลิกปุ่ม OK เพื่อสร้างระเบียนใหม่ {0} คลิกยกเลิกเพื่อกลับไปยังหน้าจอ^DefaultCreateViewDescription^
+
+^DefaultEditDescription^เหล่านี้เป็นเขตข้อมูลของระเบียน {0} ที่สามารถแก้ไขได้^DefaultEditDescription^
+
+^DefaultEditViewDescription^กรุณาตรวจสอบข้อมูลด้านล่าง {0} คลิกที่แก้ไขเพื่อบัน​​ทึกการเปลี่ยนแปลงนี้ให้คลิกลบเพื่อลบการบันทึกหรือคลิกยกเลิก / ปิดเพื่อกลับกลับ^DefaultEditViewDescription^
+
+^DefaultGridViewDescription^นี่คือรายการของ {0}^DefaultGridViewDescription^
+
+^DefaultNewDescription^กรอกแบบฟอร์ม ให้แน่ใจว่าจะใส่ฟิลด์ที่จำเป็นทั้งหมด^DefaultNewDescription^
+
+^DefaultOption^มาตรฐาน^DefaultOption^
+
+^DefaultReferenceDescription^รายละเอียดเพิ่มเติมเกี่ยวกับ {0} มีให้ในส่วนของข้อมูลอ้างอิง^DefaultReferenceDescription^
+
+^Delete^ลบ^Delete^
+
+^DeleteActionConfirmation^ลบ?^DeleteActionConfirmation^
+
+^DeleteActionHeaderText^ลบ^DeleteActionHeaderText^
+
+^Deleted^{$selected} deleted^Deleted^
+
+^DeleteSearchBarField^(ลบ)^DeleteSearchBarField^
+
+^DetailsToolTip^ดูรายละเอียดสำหรับ {0}^DetailsToolTip^
+
+^DevelopExplorer^Project Explorer^DevelopExplorer^
+
+^DevelopFormLayout^Form Layout^DevelopFormLayout^
+
+^DevelopFormLayoutInstr^Select screen sizes to be included in the layout.^DevelopFormLayoutInstr^
+
+^DevelopTools^Developer Tools^DevelopTools^
+
+^Device^Device^Device^
+
+^DidNotMatch^Did not match^DidNotMatch^
+
+^Directions^Directions^Directions^
+
+^DiscardChanges^Discard changes?^DiscardChanges^
+
+^DisplayDensity^Display Density^DisplayDensity^
+
+^DisplayedAbove^Displayed Above^DisplayedAbove^
+
+^DisplayedBelow^Displayed Below^DisplayedBelow^
+
+^Dock^เทียบท่า^Dock^
+
+^DoesNotBeginWith^ไม่ได้เริ่มต้นด้วย^DoesNotBeginWith^
+
+^DoesNotContain^ไม่ได้มี^DoesNotContain^
+
+^DoesNotEndWith^ไม่ได้สิ้นสุดด้วย^DoesNotEndWith^
+
+^DoesNotEqual^ไม่เท่ากับ^DoesNotEqual^
+
+^DoesNotInclude^ไม่รวมถึง^DoesNotInclude^
+
+^DoNotMatchAll^Do not match all conditions^DoNotMatchAll^
+
+^DoNotMatchAllPastTense^Did not match all conditions^DoNotMatchAllPastTense^
+
+^DoNotMatchAny^Do not match any conditions^DoNotMatchAny^
+
+^DoNotMatchAnyPastTense^Did not match any conditions^DoNotMatchAnyPastTense^
+
+^Download^Download^Download^
+
+^DuplicateActionHeaderText^ซ้ำ^DuplicateActionHeaderText^
+
+^EditActionHeaderText^แก้ไข^EditActionHeaderText^
+
+^EditModeCancelActionHeaderText^ยกเลิก^EditModeCancelActionHeaderText^
+
+^Empty^Empty^Empty^
+
+^EmptyContext^การกระทำที่ไม่สามารถใช้ได้^EmptyContext^
+
+^EmptyValue^(ว่าง)^EmptyValue^
+
+^EndsWith^ลงท้ายด้วย^EndsWith^
+
+^Equals^เท่ากับ^Equals^
+
+^Error^Error^Error^
+
+^ExitFullscreen^Exit Fullscreen^ExitFullscreen^
+
+^ExportCsvActionDescription^รายการดาวน์โหลดในรูปแบบ CSV^ExportCsvActionDescription^
+
+^ExportCsvActionHeaderText^ดาวน์โหลด^ExportCsvActionHeaderText^
+
+^ExportRowsetActionDescription^วิเคราะห์รายการที่มี spreadsheet<br/>application^ExportRowsetActionDescription^
+
+^ExportRowsetActionHeaderText^การส่งออกไปยังกระดาษคำนวณ^ExportRowsetActionHeaderText^
+
+^ExportRssActionDescription^รายการซินดิเคกับตัวอ่าน RSS^ExportRssActionDescription^
+
+^ExportRssActionHeaderText^ดู RSS ฟีด^ExportRssActionHeaderText^
+
+^Favorites^รายการโปรด^Favorites^
+
+^Felt^Felt^Felt^
+
+^FilesBytes^bytes^FilesBytes^
+
+^FilesClear^Clear^FilesClear^
+
+^FilesClearConfirm^Clear?^FilesClearConfirm^
+
+^FilesClick^Click to select a file^FilesClick^
+
+^FilesClickMany^Click to select files^FilesClickMany^
+
+^FilesDrop^Drop a file here^FilesDrop^
+
+^FilesDropMany^Drop files here^FilesDropMany^
+
+^FilesKB^KB^FilesKB^
+
+^FilesMB^MB^FilesMB^
+
+^FilesTap^Tap to select a file^FilesTap^
+
+^FilesTapMany^Tap to select files^FilesTapMany^
+
+^Filter^กรอง^Filter^
+
+^FilterApplied^ตัวกรองจะถูกนำไปใช้^FilterApplied^
+
+^FilterByField^Select a field to apply a filter to _______________.^FilterByField^
+
+^FilterByOptions^Select one or more options in the list below and press _______________ to filter _______________ by the field _______________.^FilterByOptions^
+
+^FilterCleared^Cleared all filters.^FilterCleared^
+
+^FilterLabelAnd^และ^FilterLabelAnd^
+
+^FilterLabelClear^ล้าง^FilterLabelClear^
+
+^FilterLabelEquals^เท่ากับ^FilterLabelEquals^
+
+^FilterLabelFilterToolTip^เปลี่ยน^FilterLabelFilterToolTip^
+
+^FilterLabelIncludes^รวมถึงการ^FilterLabelIncludes^
+
+^FilterLabelOr^หรือ^FilterLabelOr^
+
+^FilterLabelSelectAll^(เลือกทั้งหมด)^FilterLabelSelectAll^
+
+^FilterSiteMap^แผนที่เว็บไซต์กรอง ...^FilterSiteMap^
+
+^Finish^Finish^Finish^
+
+^FitToWidth^Fit To Width^FitToWidth^
+
+^FlatTreeToggle^เปลี่ยนไปเป็นลำดับชั้น^FlatTreeToggle^
+
+^FontName^ชื่อ Font^FontName^
+
+^FontSize^ขนาดตัวอักษร^FontSize^
+
+^ForeColor^สี Fore^ForeColor^
+
+^Forget^Forget^Forget^
+
+^ForgotYourPassword^ลืมรหัสผ่าน?^ForgotYourPassword^
+
+^Format^Format^Format^
+
+^Freeze^แข็ง^Freeze^
+
+^Fullscreen^Fullscreen^Fullscreen^
+
+^Future^อนาคต^Future^
+
+^GeneralTabText^ทั่วไป^GeneralTabText^
+
+^GenericNewToolTip^สร้างใหม่^GenericNewToolTip^
+
+^GenericSortAscending^ที่เล็กที่สุดในยอดนิยม^GenericSortAscending^
+
+^GenericSortDescending^ที่ใหญ่ที่สุดบนยอด^GenericSortDescending^
+
+^Graham^Graham^Graham^
+
+^GrandTotals^Grand Totals^GrandTotals^
+
+^Granite^Granite^Granite^
+
+^Grapello^Grapello^Grapello^
+
+^Gravity^Gravity^Gravity^
+
+^GreaterThan^ที่สูงกว่า^GreaterThan^
+
+^GreateThanOrEqual^Greater Than Or Equal^GreateThanOrEqual^
+
+^Grid^ตะแกรง^Grid^
+
+^GridActionDescription^รายการที่แสดงในรูปแบบ standard<br/>list^GridActionDescription^
+
+^GridActionHeaderText^แสดงในมุมมองมาตรฐาน^GridActionHeaderText^
+
+^Group^Group^Group^
+
+^GroupByField^Select a field to group <b>{0}</b>.^GroupByField^
+
+^Grouped^Grouped^Grouped^
+
+^GroupedBy^Grouped by^GroupedBy^
+
+^Heading1^Heading 1^Heading1^
+
+^Heading2^Heading 2^Heading2^
+
+^Heading3^Heading 3^Heading3^
+
+^Heading4^Heading 4^Heading4^
+
+^Heading5^Heading 5^Heading5^
+
+^Heading6^Heading 6^Heading6^
+
+^Help^ช่วยเหลือ^Help^
+
+^HelpClose^ปิด^HelpClose^
+
+^HelpFullScreen^เต็มหน้าจอ^HelpFullScreen^
+
+^Hide^Hide^Hide^
+
+^HideAdvancedSearch^ซ่อนการค้นหาขั้นสูง^HideAdvancedSearch^
+
+^HierarchyTreeModeToggle^สลับไปที่รายการแบบเรียบ^HierarchyTreeModeToggle^
+
+^History^ประวัติ^History^
+
+^HistoryToolTip^ดูประวัติของระเบียนที่เลือกก่อนหน้านี้^HistoryToolTip^
+
+^HistoryUnavailable^ประวัติความเป็นมาไม่สามารถใช้ได้^HistoryUnavailable^
+
+^Home^Home^Home^
+
+^IdleUser^คุณจะยังคงมี? กรุณาเข้าสู่ระบบอีกครั้ง^IdleUser^
+
+^ImportActionDescription^อัปโหลดไฟล์ CSV, XLS, หรือ XLSX ระเบียน file<br/>to นำเข้า^ImportActionDescription^
+
+^ImportActionHeaderText^นำเข้าจากไฟล์^ImportActionHeaderText^
+
+^ImportAutoDetect^(อัตโนมัติตรวจสอบ)^ImportAutoDetect^
+
+^ImportComplete^complete^ImportComplete^
+
+^ImportDone^Completed importing^ImportDone^
+
+^ImportDownloadTemplate^ดาวน์โหลดแบบฟอร์มนำเข้าไฟล์^ImportDownloadTemplate^
+
+^ImportDuplicates^Duplicates^ImportDuplicates^
+
+^ImportEmail^ส่งเข้าสู่ระบบนำเข้าเพื่อที่อยู่อีเมลต่อไปนี้ (เลือกได้)^ImportEmail^
+
+^ImportEmailNotSpecified^ผู้รับการเข้าสู่ระบบการนำเข้าที่ไม่ได้รับการระบุไว้ ดำเนินการต่อไปหรือไม่?^ImportEmailNotSpecified^
+
+^ImportExpected^Expected to complete^ImportExpected^
+
+^ImportFileStats^There are <b>{0}</b> records in the file <b>{1}</b> ready to be processed. Please match the field names.^ImportFileStats^
+
+^Importing^Importing^Importing^
+
+^ImportMappingInstruction^มีบันทึก <b>{0}</b> (s) ใน <b>{1}</b> ไฟล์ที่พร้อมที่จะ processed.<br/>Please แผนที่เขตข้อมูลที่นำเข้าจากแฟ้มข้อมูลไปยังเขตข้อมูลใบสมัครและคลิก <i>Import</i> เพื่อเริ่มต้นการประมวลผล^ImportMappingInstruction^
+
+^ImportNotSupported^Data format of "{0}" is not supported.^ImportNotSupported^
+
+^ImportProcessing^การประมวลผลนำเข้าไฟล์ที่ได้รับการริเริ่ม ที่นำเข้าบันทึกข้อมูลจะกลายเป็นใช้ได้กับการประมวลผลที่ประสบความสำเร็จ คุณอาจจะต้องฟื้นฟูมุมมองที่เกี่ยวข้อง / หน้าจะดูระเบียนที่นำเข้า^ImportProcessing^
+
+^ImportRemaining^Remaining^ImportRemaining^
+
+^ImportSelectFile^Select a data file in CSV, XLS, or XLSX format.^ImportSelectFile^
+
+^ImportStartButton^นำเข้า^ImportStartButton^
+
+^ImportUploading^ไฟล์ของคุณจะถูกอัพโหลดไปยังเซิร์ฟเวอร์ กรุณารอสักครู่ ...^ImportUploading^
+
+^ImportUploadInstruction^โปรดเลือกไฟล์ที่จะอัปโหลด แฟ้มจะต้องอยู่ใน <b>CSV</b>, <b>XLS</b> หรือรูปแบบ <b>XLSX</b>^ImportUploadInstruction^
+
+^In^in^In^
+
+^Includes^รวมถึงการ^Includes^
+
+^Indent^ย่อหน้า^Indent^
+
+^InfoBarAnd^และ^InfoBarAnd^
+
+^InfoBarEmpty^ว่างเปล่า^InfoBarEmpty^
+
+^InfoBarEqualTo^จะมีค่าเท่ากับ^InfoBarEqualTo^
+
+^InfoBarGreaterThan^มีค่ามากกว่า^InfoBarGreaterThan^
+
+^InfoBarGreaterThanOrEqual^มีค่ามากกว่าหรือเท่ากับ^InfoBarGreaterThanOrEqual^
+
+^InfoBarLessThan^มีค่าน้อยกว่า^InfoBarLessThan^
+
+^InfoBarLessThanOrEqual^มีค่าน้อยกว่าหรือเท่ากับ^InfoBarLessThanOrEqual^
+
+^InfoBarLike^เป็นเหมือน^InfoBarLike^
+
+^InfoBarOr^หรือ^InfoBarOr^
+
+^InfoBarQuickFind^สาขาใดสาขาหนึ่งที่มี^InfoBarQuickFind^
+
+^InfoBarStartsWith^เริ่มต้นด้วย^InfoBarStartsWith^
+
+^InitialListMode^Initial List Mode^InitialListMode^
+
+^InsertActionHeaderText^ตกลง^InsertActionHeaderText^
+
+^InsertHorizontalRule^ใส่กฎแนวนอน^InsertHorizontalRule^
+
+^InsertingRecords^Inserting records^InsertingRecords^
+
+^InsertOrderedList^ใส่รายชื่อสั่งซื้อ^InsertOrderedList^
+
+^InsertUnorderedList^แทรกรายการเรียงลำดับ^InsertUnorderedList^
+
+^Into^into^Into^
+
+^InvalidUserNameAndPassword^ชื่อผู้ใช้และรหัสผ่านของคุณจะไม่ถูกต้อง^InvalidUserNameAndPassword^
+
+^Italic^ตัวเอียง^Italic^
+
+^ItemsPerPage^รายการต่อหนึ่งหน้า :^ItemsPerPage^
+
+^ItemsSelectedMany^{0} items selected^ItemsSelectedMany^
+
+^ItemsSelectedOne^{0} item selected^ItemsSelectedOne^
+
+^JustDatesNow^Just now^JustDatesNow^
+
+^JustifyCenter^แสดงให้เห็นถึงศูนย์^JustifyCenter^
+
+^JustifyFull^ให้เห็นถึงความเต็ม^JustifyFull^
+
+^JustifyLeft^ปรับซ้าย^JustifyLeft^
+
+^JustifyRight^แสดงให้เห็นถึงขวา^JustifyRight^
+
+^LabelsInList^Labels In List^LabelsInList^
+
+^Lacquer^Lacquer^Lacquer^
+
+^Laminate^Laminate^Laminate^
+
+^Landscape^Landscape^Landscape^
+
+^Large^Large^Large^
+
+^LastMonth^เดือนสุดท้าย^LastMonth^
+
+^LastQuarter^ไตรมาสสุดท้าย^LastQuarter^
+
+^LastWeek^สัปดาห์สุดท้าย^LastWeek^
+
+^LastYear^ปีสุดท้าย^LastYear^
+
+^Less^Less^Less^
+
+^LessThan^น้อยกว่า^LessThan^
+
+^LessThanOrEqual^Less Than Or Equal^LessThanOrEqual^
+
+^Lichen^Lichen^Lichen^
+
+^LightTheme^Light^LightTheme^
+
+^Line^Line^Line^
+
+^List^รายการ^List^
+
+^ListOneColumn^List (One Column)^ListOneColumn^
+
+^ListViewStyle^List^ListViewStyle^
+
+^Loading^กำลังโหลด ...^Loading^
+
+^Logical^Logical^Logical^
+
+^LoginButton^เข้าสู่ระบบ^LoginButton^
+
+^LoginLink^เข้าสู่ระบบ^LoginLink^
+
+^Logout^ออกจากระบบ^Logout^
+
+^LookupInstruction^กรุณาเลือก <b>{0}</b> ในรายการ^LookupInstruction^
+
+^LookupOriginalSelection^เลือกเดิม <b>&quot;{0}&quot;</b>^LookupOriginalSelection^
+
+^ManageAccounts^Manage Accounts^ManageAccounts^
+
+^Map^Map^Map^
+
+^MatchAll^Match all conditions^MatchAll^
+
+^MatchAllPastTense^Matched all conditions^MatchAllPastTense^
+
+^MatchAny^Match any conditions^MatchAny^
+
+^MatchAnyPastTense^Matched any conditions^MatchAnyPastTense^
+
+^Matched^Matched^Matched^
+
+^MaxAggregate^สูงสุด : {0}^MaxAggregate^
+
+^MaxAggregateToolTip^สูงสุดของ {0}^MaxAggregateToolTip^
+
+^Maximize^ขยาย^Maximize^
+
+^MaximumOf^Maximum of^MaximumOf^
+
+^Medium^Medium^Medium^
+
+^Menu^Menu^Menu^
+
+^MinAggregate^ขั้นต่ำ : {0}^MinAggregate^
+
+^MinAggregateToolTip^ขั้นต่ำของ {0}^MinAggregateToolTip^
+
+^Minimize^ยุบ^Minimize^
+
+^MinimumOf^Minimum of^MinimumOf^
+
+^Mission^Mission^Mission^
+
+^ModeBrowsing^การเรียกดู^ModeBrowsing^
+
+^ModeEditing^การตัดต่อ^ModeEditing^
+
+^ModeEntering^การป้อน^ModeEntering^
+
+^ModeLookup^ค้นหา^ModeLookup^
+
+^Modern^Modern^Modern^
+
+^ModernRose^Modern Rose^ModernRose^
+
+^ModeViewing^การดู^ModeViewing^
+
+^Month^Month^Month^
+
+^More^More^More^
+
+^MultiSelection^Multi Selection^MultiSelection^
+
+^Municipal^Municipal^Municipal^
+
+^MyAccount^บัญชีของฉัน^MyAccount^
+
+^Never^Never^Never^
+
+^NewActionHeaderText^ใหม่^NewActionHeaderText^
+
+^NewRowLink^คลิกที่นี่เพื่อสร้างระเบียนใหม่^NewRowLink^
+
+^NewToolTip^{0} ใหม่^NewToolTip^
+
+^Next^ถัดไป^Next^
+
+^Next2^Next^Next2^
+
+^NextMonth^เดือนถัดไป^NextMonth^
+
+^NextQuarter^ไตรมาสถัดไป^NextQuarter^
+
+^NextWeek^สัปดาห์ถัดไป^NextWeek^
+
+^NextYear^ปีถัดไป^NextYear^
+
+^No^ไม่มี^No^
+
+^NoMatches^No matches.^NoMatches^
+
+^None^None^None^
+
+^Noon^Noon^Noon^
+
+^NoRecords^ระเบียนไม่พบ^NoRecords^
+
+^NoteDeleteConfirm^ลบ?^NoteDeleteConfirm^
+
+^NoteDeleteLabel^ลบ^NoteDeleteLabel^
+
+^NoteEditLabel^แก้ไข^NoteEditLabel^
+
+^NotEmpty^Not Empty^NotEmpty^
+
+^NotMatched^(not matched)^NotMatched^
+
+^NullValue^n / a^NullValue^
+
+^NullValueInForms^N / A^NullValueInForms^
+
+^Number^Number^Number^
+
+^NumberFilterText^ตัวกรองตัวเลข^NumberFilterText^
+
+^NumberIsExpected^จำนวนคาดว่าจะ^NumberIsExpected^
+
+^OK^ตกลง^OK^
+
+^OnHover^On Hover^OnHover^
+
+^OnOrAfter^On or After^OnOrAfter^
+
+^OnOrBefore^On or Before^OnOrBefore^
+
+^OpenActionHeaderText^เปิด^OpenActionHeaderText^
+
+^Optional^Optional^Optional^
+
+^Orientation^Orientation^Orientation^
+
+^Other^Other^Other^
+
+^Outdent^เยื้องออก^Outdent^
+
+^Page^หน้า^Page^
+
+^Paragraph^Paragraph^Paragraph^
+
+^Password^รหัสผ่าน^Password^
+
+^Past^ที่ผ่านมา^Past^
+
+^Paste^แปะ^Paste^
+
+^PerformAdvancedSearch^ค้นหา^PerformAdvancedSearch^
+
+^Permalink^ความคิดเห็น^Permalink^
+
+^PermalinkToolTip^สร้างการเชื่อมโยงอย่างถาวรสำหรับการบันทึกที่เลือก^PermalinkToolTip^
+
+^PermalinkUnavailable^เพราะไม่สามารถใช้ได้ กรุณาเลือกบันทึก^PermalinkUnavailable^
+
+^Petal^Petal^Petal^
+
+^Pinnate^Pinnate^Pinnate^
+
+^Plastic^Plastic^Plastic^
+
+^Portrait^Portrait^Portrait^
+
+^PresentationStyle^เลือกรูปแบบการนำเสนอข้อมูล^PresentationStyle^
+
+^Prev2^Prev^Prev2^
+
+^Previous^ก่อนหน้า^Previous^
+
+^PromoteActions^Promote Actions^PromoteActions^
+
+^Quarter^Quarter^Quarter^
+
+^Quarter1^ไตรมาสที่ 1^Quarter1^
+
+^Quarter2^ไตรมาสที่ 2^Quarter2^
+
+^Quarter3^ไตรมาสที่ 3^Quarter3^
+
+^Quarter4^ไตรมาส 4^Quarter4^
+
+^QuickFindScope^Search in...^QuickFindScope^
+
+^QuickFindText^ค้นหา^QuickFindText^
+
+^QuickFindToolTip^พิมพ์เพื่อค้นหาระเบียนและกด Enter^QuickFindToolTip^
+
+^Quotation^Quotation^Quotation^
+
+^Recent^Recent^Recent^
+
+^Redo^ทำซ้ำ^Redo^
+
+^Refresh^รีเฟรช^Refresh^
+
+^Refreshed^Refreshed^Refreshed^
+
+^RememberMe^จำฉันไว้ในครั้งถัดไป^RememberMe^
+
+^RemoveCondition^เอาสภาพ^RemoveCondition^
+
+^RemoveFormat^ลบรูปแบบ^RemoveFormat^
+
+^ReportActionDescription^แสดงรายงานในรูปแบบ PDF^ReportActionDescription^
+
+^ReportActionHeaderText^รายงาน^ReportActionHeaderText^
+
+^ReportAsExcelActionDescription^ดูรายการในกระดาษคำนวณ Excel formatted<br/>Microsoft^ReportAsExcelActionDescription^
+
+^ReportAsExcelActionHeaderText^สเปรดชีท^ReportAsExcelActionHeaderText^
+
+^ReportAsImageActionDescription^ดูรายการเป็นภาพที่มีหลายรูปแบบ TIFF^ReportAsImageActionDescription^
+
+^ReportAsImageActionHeaderText^มีหลายภาพ^ReportAsImageActionHeaderText^
+
+^ReportAsPdfActionDescription^ดูรายการที่เป็น Adob​​e PDF document.<br/>Requires เป็นผู้อ่านที่เข้ากันได้^ReportAsPdfActionDescription^
+
+^ReportAsPdfActionHeaderText^เอกสาร PDF^ReportAsPdfActionHeaderText^
+
+^ReportAsWordActionDescription^ดูรายการในเอกสาร Word formatted<br/>Microsoft^ReportAsWordActionDescription^
+
+^ReportAsWordActionHeaderText^โปรแกรม Microsoft Word^ReportAsWordActionHeaderText^
+
+^Required^Required^Required^
+
+^RequiredField^กรุณากรอกข้อมูลให้ครบถ้วน^RequiredField^
+
+^RequiredFiledMarkerFootNote^บ่งชี้ถึงข้อมูลที่จำเป็นต้อง^RequiredFiledMarkerFootNote^
+
+^ResetAdvancedSearch^ตั้งค่าใหม่^ResetAdvancedSearch^
+
+^ResetSearchConfirm^Reset search conditions?^ResetSearchConfirm^
+
+^ResolvingReferences^Resolving references^ResolvingReferences^
+
+^ResumeBrowsing^Resume Browsing^ResumeBrowsing^
+
+^ResumeEditing^Resume Editing^ResumeEditing^
+
+^ResumeEntering^Resume Entering^ResumeEntering^
+
+^ResumeLookup^Resume Lookup^ResumeLookup^
+
+^ResumeViewing^Resume Viewing^ResumeViewing^
+
+^Ricasso^Ricasso^Ricasso^
+
+^RolesTab^บทบาท^RolesTab^
+
+^RootNodeText^ระดับสูงสุด^RootNodeText^
+
+^Rose^Rose^Rose^
+
+^Rotate^หมุน^Rotate^
+
+^RowCancelActionHeaderText^ยกเลิก^RowCancelActionHeaderText^
+
+^RowInsertActionHeaderText^แทรก^RowInsertActionHeaderText^
+
+^RowUpdateActionHeaderText^บันทึก^RowUpdateActionHeaderText^
+
+^RowUpdateWhenBatchEditActionConfirmation^ปรับปรุง?^RowUpdateWhenBatchEditActionConfirmation^
+
+^RowUpdateWhenBatchEditActionHeaderText^การคัดเลือกปรับปรุง^RowUpdateWhenBatchEditActionHeaderText^
+
+^Save^บันทึก^Save^
+
+^SaveAndNew^บันทึกและใหม่^SaveAndNew^
+
+^Saved^Saved - {0}^Saved^
+
+^SeeAll^See All^SeeAll^
+
+^SeeAlso^ดูเพิ่มเติม^SeeAlso^
+
+^SelectActionHeaderText^เลือก^SelectActionHeaderText^
+
+^SelectAll^เลือกทั้งหมด^SelectAll^
+
+^SelectLink^(เลือก)^SelectLink^
+
+^SelectToolTip^เลือก {0}^SelectToolTip^
+
+^Separator^เครื่องสกัด^Separator^
+
+^Settings^Settings^Settings^
+
+^Show^Show^Show^
+
+^ShowAdvancedSearch^แสดงการค้นหาขั้นสูง^ShowAdvancedSearch^
+
+^ShowChart^Show Chart^ShowChart^
+
+^ShowData^Show Data^ShowData^
+
+^ShowingItems^แสดง <b>{0}</b> <b>{1}</b> ของรายการ <b>{2}</b>^ShowingItems^
+
+^ShowingItemsInfo^Showing _____ items.^ShowingItemsInfo^
+
+^ShowingItemsRange^Showing {0} of {1} items^ShowingItemsRange^
+
+^ShowLess^Show Less^ShowLess^
+
+^ShowMore^Show More^ShowMore^
+
+^ShowOptions^Show Options^ShowOptions^
+
+^ShowSystemButtons^Show System Buttons^ShowSystemButtons^
+
+^Sidebar^Sidebar^Sidebar^
+
+^Sign^Sign here^Sign^
+
+^SignedOut^Signed Out^SignedOut^
+
+^SignUpNow^Sign up now^SignUpNow^
+
+^Simple^Simple^Simple^
+
+^SiteActions^การกระทำในไซต์^SiteActions^
+
+^SizeLabel^Size^SizeLabel^
+
+^Small^Small^Small^
+
+^Social^Social^Social^
+
+^Sort^แยกกลุ่ม^Sort^
+
+^SortBy^เรียงตาม {0}^SortBy^
+
+^SortByField^เลือกเขตข้อมูลที่จะเปลี่ยนลำดับการจัดเรียงของ <b>{0}</b>^SortByField^
+
+^SortByOptions^เลือกลำดับการจัดเรียงของ <b>{0}</b> โดยสนาม <b>{1}</b> ในรายการของตัวเลือกด้านล่าง^SortByOptions^
+
+^Sorted^Sorted^Sorted^
+
+^SortedDefault^Default sort order.^SortedDefault^
+
+^StartImport^Start Import^StartImport^
+
+^StrikeThrough^Strike ผ่าน^StrikeThrough^
+
+^StringSortAscending^จากน้อยไปมาก^StringSortAscending^
+
+^StringSortDescending^มากไปน้อย^StringSortDescending^
+
+^Submit^Submit^Submit^
+
+^Subscript^สคริปต์ย่อย^Subscript^
+
+^Suggestions^Suggestions^Suggestions^
+
+^SumAggregate^ผลรวม : {0}^SumAggregate^
+
+^SumAggregateToolTip^ผลรวมของ {0}^SumAggregateToolTip^
+
+^Summary^ข้อมูลอย่างย่อ^Summary^
+
+^Summer^Summer^Summer^
+
+^SumOf^Total of^SumOf^
+
+^Superscript^สคริปต์ซุปเปอร์^Superscript^
+
+^Sync^Sync^Sync^
+
+^TaskResume^ประวัติย่อ^TaskResume^
+
+^Tasks^งาน^Tasks^
+
+^TestingRecords^Testing records^TestingRecords^
+
+^Text^Text^Text^
+
+^TextFilterText^ตัวกรองข้อความ^TextFilterText^
+
+^Theme^Theme^Theme^
+
+^ThisMonth^เดือนนี้เดือนนี้^ThisMonth^
+
+^ThisQuarter^ไตรมาสนี้^ThisQuarter^
+
+^ThisWeek^สัปดาห์นี้^ThisWeek^
+
+^ThisYear^เดือนนี้ปีนี้^ThisYear^
+
+^Tiny^Tiny^Tiny^
+
+^Today^วันนี้^Today^
+
+^Tomorrow^วันพรุ่งนี้^Tomorrow^
+
+^Top^top^Top^
+
+^ToThisWebsite^ไปที่เว็บไซต์นี้^ToThisWebsite^
+
+^TouchUINotSupported^Touch UI is not supported in this browser.^TouchUINotSupported^
+
+^TransitionFade^Fade^TransitionFade^
+
+^TransitionFlip^Flip^TransitionFlip^
+
+^TransitionFlow^Flow^TransitionFlow^
+
+^TransitionNone^None^TransitionNone^
+
+^TransitionPop^Pop^TransitionPop^
+
+^Transitions^Transitions^Transitions^
+
+^TransitionSlide^Slide^TransitionSlide^
+
+^TransitionSlideDown^Slide Down^TransitionSlideDown^
+
+^TransitionSlideUp^Slide Up^TransitionSlideUp^
+
+^TransitionTurn^Turn^TransitionTurn^
+
+^TreeActionDescription^แสดงความสัมพันธ์แบบลำดับชั้น^TreeActionDescription^
+
+^TreeActionHeaderText^แสดงลำดับชั้น^TreeActionHeaderText^
+
+^TypeToSearch^Type to Search^TypeToSearch^
+
+^Underline^ขีดเส้นใต้^Underline^
+
+^Undo^แก้^Undo^
+
+^Undock^ไปจากกัน^Undock^
+
+^Unfreeze^ทำน้ำแข็งให้ละลาย^Unfreeze^
+
+^UnGrouped^Grouping has been removed^UnGrouped^
+
+^UnLink^ยกเลิกการเชื่อมโยง^UnLink^
+
+^UnSelect^ยกเลิกการเลือก^UnSelect^
+
+^UpdateActionHeaderText^ตกลง^UpdateActionHeaderText^
+
+^UpdateActionInBatchModeConfirmation^ปรับปรุง?^UpdateActionInBatchModeConfirmation^
+
+^UpdateActionInBatchModeHeaderText^การคัดเลือกปรับปรุง^UpdateActionInBatchModeHeaderText^
+
+^UpOneLevel^ขึ้นหนึ่งระดับ^UpOneLevel^
+
+^UseLEV^วาง &quot;{0}&quot;^UseLEV^
+
+^UserName^ชื่อผู้ใช้^UserName^
+
+^UsersInRole^ผู้ใช้ในบทบาท^UsersInRole^
+
+^UsersTab^ผู้ใช้งาน^UsersTab^
+
+^Vantage^Vantage^Vantage^
+
+^Verdant^Verdant^Verdant^
+
+^View^ดู^View^
+
+^Viewpoint^Viewpoint^Viewpoint^
+
+^Week^Week^Week^
+
+^Welcome1^ยินดีต้อนรับคุณ^Welcome1^
+
+^Welcome2^วันนี้^Welcome2^
+
+^WhiteSmoke^White Smoke^WhiteSmoke^
+
+^WithSelectedValues10^With Selected Values (Top 10)^WithSelectedValues10^
+
+^WithSelectedValues5^With Selected Values (Top 5)^WithSelectedValues5^
+
+^WithSpecifiedFilters^With Specified Filters^WithSpecifiedFilters^
+
+^Year^Year^Year^
+
+^YearToDate^ปีในวันที่^YearToDate^
+
+^Yes^ใช่^Yes^
+
+^Yesterday^เมื่อวาน^Yesterday^
+
+^Yoshi^Yoshi^Yoshi^
+
+^ZoomIn^Zoom in^ZoomIn^
+
+^ZoomOut^Zoom out^ZoomOut^
+

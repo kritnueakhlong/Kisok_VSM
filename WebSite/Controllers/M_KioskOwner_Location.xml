@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="M_KioskOwner_Location" conflictDetection="overwriteChanges" label="M Kiosk Owner Location" plugIn="VSM.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"M_KioskOwner_Location"."Location_ID" "Location_ID"
+	,"M_KioskOwner_Location"."Location_Address" "Location_Address"
+	,"M_KioskOwner_Location"."Location_LAT" "Location_LAT"
+	,"M_KioskOwner_Location"."Location_LONG" "Location_LONG"
+	,"M_KioskOwner_Location"."KioskOwner_ID" "KioskOwner_ID"
+	,"KioskOwner_"."KioskOwner_Code" "KioskOwner_KioskOwner_Code"
+	,"M_KioskOwner_Location"."KioskOwner_Branch_ID" "KioskOwner_Branch_ID"
+	,"KioskOwner_Branch_"."KioskOwner_Branch_Code" "KioskOwner_Branch_KioskOwner_Branch_Code"
+	,"M_KioskOwner_Location"."Item_Flag" "Item_Flag"
+	,"M_KioskOwner_Location"."CreatedBy" "CreatedBy"
+	,"M_KioskOwner_Location"."CreatedOn" "CreatedOn"
+	,"M_KioskOwner_Location"."ModifiedBy" "ModifiedBy"
+	,"M_KioskOwner_Location"."ModifiedOn" "ModifiedOn"
+from "dbo"."M_KioskOwner_Location" "M_KioskOwner_Location"
+	left join "dbo"."M_Kiosk_Owner" "KioskOwner_" on "M_KioskOwner_Location"."KioskOwner_ID" = "KioskOwner_"."KioskOwner_ID"
+	left join "dbo"."M_Kiosk_Owner_Branch" "KioskOwner_Branch_" on "M_KioskOwner_Location"."KioskOwner_Branch_ID" = "KioskOwner_Branch_"."KioskOwner_Branch_ID"
+]]></text>
+    </command>
+    <command id="Location_IDUniqueIdentifierCommand" type="Text" event="Inserting">
+      <text><![CDATA[select newid()]]></text>
+      <output>
+        <fieldOutput fieldName="Location_ID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="Location_ID" type="Guid" allowNulls="false" isPrimaryKey="true" default="(newid())" label="Location#" />
+    <field name="Location_Address" type="String" label="^Location_Address^สถานที่ตั้งตู้ Kiosk^Location_Address^" length="500" showInSummary="true" allowNulls="false" />
+    <field name="Location_LAT" type="Decimal" label="^Location_LAT^ละติจูด^Location_LAT^" showInSummary="true" />
+    <field name="Location_LONG" type="Decimal" label="^Location_LONG^ลองติจูด^Location_LONG^" showInSummary="true" />
+    <field name="KioskOwner_ID" type="Guid" allowNulls="false" label="KioskOwner#" showInSummary="true">
+      <items style="Lookup" dataController="M_Kiosk_Owner" dataValueField="KioskOwner_ID" dataTextField="KioskOwner_Code" />
+    </field>
+    <field name="KioskOwner_KioskOwner_Code" type="String" readOnly="true" label="^Kiosk_Owner^รหัสเจ้าของตู้ kiosk^Kiosk_Owner^" length="10" />
+    <field name="KioskOwner_Branch_ID" type="Guid" allowNulls="false" label="Kiosk Owner Branch#" showInSummary="true">
+      <items style="Lookup" dataController="M_Kiosk_Owner_Branch" newDataView="createForm1" dataValueField="KioskOwner_Branch_ID" />
+    </field>
+    <field name="KioskOwner_Branch_KioskOwner_Branch_Code" type="String" readOnly="true" label="Kiosk Owner Branch Code" length="10" />
+    <field name="Item_Flag" type="Boolean" default="((1))" label="Item Flag" hidden="true" />
+    <field name="CreatedBy" type="String" label="^Created_By^สร้างโดย^Created_By^" length="128" />
+    <field name="CreatedOn" type="DateTime" label="^Created_On^วันที่สร้าง^Created_On^" />
+    <field name="ModifiedBy" type="String" label="^Modified_By^แก้ไขโดย^Modified_By^" length="128" />
+    <field name="ModifiedOn" type="DateTime" label="^Modified_On^วันที่แก้ไข^Modified_On^" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="M Kiosk Owner Location">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="KioskOwner_ID" aliasFieldName="KioskOwner_KioskOwner_Code" />
+        <dataField fieldName="Location_Address" />
+        <dataField fieldName="Location_LAT" columns="15" />
+        <dataField fieldName="Location_LONG" columns="15" />
+        <dataField fieldName="KioskOwner_Branch_ID" aliasFieldName="KioskOwner_Branch_KioskOwner_Branch_Code" />
+        <dataField fieldName="Item_Flag" />
+        <dataField fieldName="CreatedBy" />
+        <dataField fieldName="CreatedOn" columns="10" />
+        <dataField fieldName="ModifiedBy" />
+        <dataField fieldName="ModifiedOn" columns="10" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review M Kiosk Owner Location">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="M Kiosk Owner Location" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Location_Address" />
+            <dataField fieldName="Location_LAT" columns="15" />
+            <dataField fieldName="Location_LONG" columns="15" />
+            <dataField fieldName="KioskOwner_ID" aliasFieldName="KioskOwner_KioskOwner_Code" />
+            <dataField fieldName="KioskOwner_Branch_ID" aliasFieldName="KioskOwner_Branch_KioskOwner_Branch_Code" />
+            <dataField fieldName="Item_Flag" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New M Kiosk Owner Location">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New M Kiosk Owner Location" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Location_Address" />
+            <dataField fieldName="Location_LAT" columns="15" />
+            <dataField fieldName="Location_LONG" columns="15" />
+            <dataField fieldName="KioskOwner_ID" aliasFieldName="KioskOwner_KioskOwner_Code" />
+            <dataField fieldName="KioskOwner_Branch_ID" aliasFieldName="KioskOwner_Branch_KioskOwner_Branch_Code" />
+            <dataField fieldName="Item_Flag" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

@@ -1,0 +1,27 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in EmployeeEdit.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^CreatedOn^Created On^CreatedOn^
+
+^createname^Created By^createname^
+
+^EmpCode^Employee Code^EmpCode^
+
+^EmpEmail^E-Mail^EmpEmail^
+
+^EmpFname^First Name^EmpFname^
+
+^EmpLname^Last Name^EmpLname^
+
+^Password^Password^Password^
+
+^Telephone^Telephone^Telephone^
+
+^UpdatedOn^Modified On^UpdatedOn^
+
+^updatename^Modified By^updatename^
+

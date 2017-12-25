@@ -1,0 +1,9 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in RPT_Regis.aspx project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_Register_Report^รายงานการลงทะเบียนใหม่^Page_Register_Report^
+

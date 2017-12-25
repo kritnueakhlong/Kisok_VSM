@@ -1,0 +1,27 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in M_System_Config.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Config_Desc^Config Description^Config_Desc^
+
+^Config_Name^Config Name^Config_Name^
+
+^Config_Type_Code^Config Type Code^Config_Type_Code^
+
+^Config_Type_Name^Config Type Name^Config_Type_Name^
+
+^Config_Value^Config Value^Config_Value^
+
+^Controller_M_System_Config^Setting^Controller_M_System_Config^
+
+^Created_By^Created By^Created_By^
+
+^Created_On^Created On^Created_On^
+
+^Modified_By^Modified By^Modified_By^
+
+^Modified_On^Modified On^Modified_On^
+

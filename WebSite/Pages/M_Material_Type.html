@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>M Material Type</title>
+    <meta name="description" content="This page allows m material type management.">
+  </head>
+  <body class="Wide">
+    <div data-flow="row">
+      <div id="view1" data-controller="M_Material_Type" data-view="grid1" data-show-in-summary="true"> </div>
+    </div>
+    <div data-flow="row" style="padding-top:8px">
+      <div data-activator="Tab|M Material">
+        <div id="view2" data-controller="M_Material" data-view="grid1" data-filter-source="view1" data-filter-fields="MaterType_Code" data-page-size="5" data-auto-hide="container" data-show-modal-forms="true"> </div>
+      </div>
+      <div data-activator="Tab|M Kiosk Material">
+        <div id="view3" data-controller="M_Kiosk_Material" data-view="grid1" data-filter-source="view1" data-filter-fields="Mater_MaterType_Code" data-page-size="5" data-auto-hide="container" data-show-modal-forms="true"> </div>
+      </div>
+    </div>
+  </body>
+</html>

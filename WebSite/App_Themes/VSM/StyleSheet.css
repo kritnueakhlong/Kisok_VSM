@@ -1,0 +1,9 @@
+﻿div#PageHeaderBar {
+    background-image: url(vsm_logo.png);
+    height:60px;
+}
+    div#PageHeaderBar span {
+        height:42px;
+        font-size:20px;
+        margin-right: 100px;
+    }

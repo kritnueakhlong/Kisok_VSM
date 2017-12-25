@@ -1,0 +1,11 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in Roles.html project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_Roles^บทบาท^Page_Roles^
+
+^Page_Roles_view1^Roles^Page_Roles_view1^
+

@@ -1,0 +1,33 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in VW_RPT_Log_Kiosk.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Authen_User^User Name^Authen_User^
+
+^Birth_Date^Birth Date^Birth_Date^
+
+^Controller_LogKiosk_Report^Log Kiosk Report^Controller_LogKiosk_Report^
+
+^Created_On^Created On^Created_On^
+
+^IdenDoc_Code^Card Type^IdenDoc_Code^
+
+^Identity_ID^Card ID^Identity_ID^
+
+^Kiosk_Code^Kiosk Code^Kiosk_Code^
+
+^Location_Address^Location Address^Location_Address^
+
+^Log_Address^Address^Log_Address^
+
+^Name_th^Name^Name_th^
+
+^Phone_No^Phone No^Phone_No^
+
+^Sex^Sex^Sex^
+
+^Usage_Status_Name^Usage Status Name^Usage_Status_Name^
+

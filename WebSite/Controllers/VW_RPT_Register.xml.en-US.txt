@@ -1,0 +1,33 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in VW_RPT_Register.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Authen_User^User Name^Authen_User^
+
+^Birth_Date^Birth Date^Birth_Date^
+
+^Created_On^Created On^Created_On^
+
+^IdenDoc_Code^Card Type^IdenDoc_Code^
+
+^Identity_ID^Card ID^Identity_ID^
+
+^Kiosk_Code^Kiosk Code^Kiosk_Code^
+
+^Log_Address^Address^Log_Address^
+
+^Name_th^Name^Name_th^
+
+^Phone_No^Phone No^Phone_No^
+
+^Register_Report^Register Report^Register_Report^
+
+^Sex^Sex^Sex^
+
+^Usage_Status_Code^User Type^Usage_Status_Code^
+
+^Usage_Status_Name^Usage Status Name^Usage_Status_Name^
+

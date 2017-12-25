@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="urn:codeontime:data-map">
+  <node name="M_Kiosk" refs="7" depth="0" schema="dbo" label="M Kiosk" schemaLabel="Dbo">
+    <node name="M_Kiosk_Material" refs="0" depth="1" schema="dbo" label="M Kiosk Material" schemaLabel="Dbo" />
+    <node name="M_KioskGroup_KioskID" refs="0" depth="1" schema="dbo" label="M Kiosk Group Kiosk#" schemaLabel="Dbo" />
+    <node name="M_SSID_Kiosk" refs="0" depth="1" schema="dbo" label="M SSID Kiosk" schemaLabel="Dbo" />
+    <node name="T_Advertise_Kiosk" refs="0" depth="1" schema="dbo" label="T Advertise Kiosk" schemaLabel="Dbo" />
+    <node name="T_Contents_Kiosk" refs="0" depth="1" schema="dbo" label="T Contents Kiosk" schemaLabel="Dbo" />
+    <node name="T_Kiosk_Signal" refs="0" depth="1" schema="dbo" label="T Kiosk Signal" schemaLabel="Dbo" />
+    <node name="T_Kiosk_Usage" refs="0" depth="1" schema="dbo" label="T Kiosk Usage" schemaLabel="Dbo" />
+  </node>
+  <node name="M_Kiosk_Owner_Branch" refs="6" depth="0" schema="dbo" label="M Kiosk Owner Branch" schemaLabel="Dbo">
+    <node name="Base_Customer" refs="1" depth="1" schema="dbo" label="Base Customer" schemaLabel="Dbo">
+      <node name="Base_Customer_Authentication" refs="0" depth="2" schema="dbo" label="Base Customer Authentication" schemaLabel="Dbo" />
+    </node>
+    <node name="Employee" refs="1" depth="1" schema="dbo" label="Employee" schemaLabel="Dbo">
+      <node name="Employee_Roles" refs="0" depth="2" schema="dbo" label="Employee Roles" schemaLabel="Dbo" />
+    </node>
+    <node name="M_KioskOwner_Location" refs="1" depth="1" schema="dbo" label="M Kiosk Owner Location" schemaLabel="Dbo" />
+    <node name="M_KioskOwner_Config" refs="0" depth="1" schema="dbo" label="M Kiosk Owner Config" schemaLabel="Dbo" />
+    <node name="T_Customer_Blacklist" refs="0" depth="1" schema="dbo" label="T Customer Blacklist" schemaLabel="Dbo" />
+  </node>
+  <node name="M_Country" refs="3" depth="0" schema="dbo" label="M Country" schemaLabel="Dbo">
+    <node name="M_Localization_Country" refs="0" depth="1" schema="dbo" label="M Localization Country" schemaLabel="Dbo" />
+  </node>
+  <node name="M_IDentify_Document" refs="3" depth="0" schema="dbo" label="M I Dentify Document" schemaLabel="Dbo" />
+  <node name="M_KioskGroup" refs="3" depth="0" schema="dbo" label="M Kiosk Group" schemaLabel="Dbo">
+    <node name="T_Advertise_KioskGroup" refs="0" depth="1" schema="dbo" label="T Advertise Kiosk Group" schemaLabel="Dbo" />
+    <node name="T_Contents_KioskGroup" refs="0" depth="1" schema="dbo" label="T Contents Kiosk Group" schemaLabel="Dbo" />
+    <node name="M_Config_Type" refs="2" depth="0" schema="dbo" label="M Config Type" schemaLabel="Dbo">
+      <node name="M_System_Config" refs="1" depth="1" schema="dbo" label="M System Config" schemaLabel="Dbo" />
+    </node>
+    <node name="M_Localization" refs="2" depth="0" schema="dbo" label="M Localization" schemaLabel="Dbo">
+      <node name="M_Usage_Status" refs="0" depth="1" schema="dbo" label="M Usage Status" schemaLabel="Dbo" />
+    </node>
+    <node name="M_Material_Type" refs="2" depth="0" schema="dbo" label="M Material Type" schemaLabel="Dbo">
+      <node name="M_Material" refs="1" depth="1" schema="dbo" label="M Material" schemaLabel="Dbo" />
+    </node>
+    <node name="M_Radius_Server" refs="2" depth="0" schema="dbo" label="M Radius Server" schemaLabel="Dbo">
+      <node name="M_Radius_Server_Interface" refs="1" depth="1" schema="dbo" label="M Radius Server Interface" schemaLabel="Dbo">
+        <node name="M_KioskOwner_Radius_Connection" refs="0" depth="2" schema="dbo" label="M Kiosk Owner Radius Connection" schemaLabel="Dbo" />
+      </node>
+      <node name="M_SSID" refs="1" depth="1" schema="dbo" label="M Ssid" schemaLabel="Dbo" />
+    </node>
+    <node name="T_Advertise" refs="2" depth="0" schema="dbo" label="T Advertise" schemaLabel="Dbo" />
+    <node name="T_Contents" refs="2" depth="0" schema="dbo" label="T Contents" schemaLabel="Dbo" />
+    <node name="M_Kiosk_Owner" refs="10" depth="0" schema="dbo" label="M Kiosk Owner" schemaLabel="Dbo">
+      <node name="T_KioskOwner_MA" refs="0" depth="1" schema="dbo" label="T Kiosk Owner MA" schemaLabel="Dbo" />
+    </node>
+    <node name="M_Generate_By" refs="1" depth="0" schema="dbo" label="M Generate By" schemaLabel="Dbo" />
+    <node name="M_Interface" refs="1" depth="0" schema="dbo" label="M Interface" schemaLabel="Dbo" />
+    <node name="M_Kiosk_Type" refs="1" depth="0" schema="dbo" label="M Kiosk Type" schemaLabel="Dbo" />
+    <node name="Roles" refs="1" depth="0" schema="dbo" label="Roles" schemaLabel="Dbo" />
+    <node name="HelpDesk" refs="0" depth="0" schema="dbo" label="Help Desk" schemaLabel="Dbo" />
+    <node name="Personnel" refs="0" depth="0" schema="dbo" label="Personnel" schemaLabel="Dbo" />
+  </node>
+  <node name="AllReports" label="^ReportsPath^Reports^ReportsPath^">
+    <node name="VW_Advertise" refs="0" depth="0" schema="dbo" label="VW Advertise" schemaLabel="Dbo" parent="Reports" />
+    <node name="VW_Fields_Description" refs="0" depth="0" schema="dbo" label="VW Fields Description" schemaLabel="Dbo" parent="Reports" />
+    <node name="VW_Kiosk_Monitoring" refs="0" depth="0" schema="dbo" label="VW Kiosk Monitoring" schemaLabel="Dbo" parent="Reports" />
+    <node name="VW_RPT_Kiosk_Error" refs="0" depth="0" schema="dbo" label="VW RPT Kiosk Error" schemaLabel="Dbo" parent="Reports" />
+    <node name="VW_RPT_Kiosk_Usage" refs="0" depth="0" schema="dbo" label="VW RPT Kiosk Usage" schemaLabel="Dbo" parent="Reports" />
+    <node name="VW_RPT_Kiosk_Usage_Detail" refs="0" depth="0" schema="dbo" label="VW RPT Kiosk Usage Detail" schemaLabel="Dbo" parent="Reports" />
+    <node name="VW_RPT_Log_Kiosk" refs="0" depth="0" schema="dbo" label="VW RPT Log Kiosk" schemaLabel="Dbo" parent="Reports" />
+    <node name="VW_RPT_OldCustomer" refs="0" depth="0" schema="dbo" label="VW RPT Old Customer" schemaLabel="Dbo" parent="Reports" />
+    <node name="VW_RPT_OldCustomer_Detail" refs="0" depth="0" schema="dbo" label="VW RPT Old Customer Detail" schemaLabel="Dbo" parent="Reports" />
+    <node name="VW_RPT_Register" refs="0" depth="0" schema="dbo" label="VW RPT Register" schemaLabel="Dbo" parent="Reports" />
+  </node>
+</map>

@@ -1,0 +1,9 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in EditUser.html project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_EditUser^แก้ไขข้อมูล^Page_EditUser^
+

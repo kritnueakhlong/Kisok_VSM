@@ -1,0 +1,16 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>^Page_Roles^บทบาท^Page_Roles^</title>
+    <meta name="description" content="This page allows roles management.">
+  </head>
+  <body>
+    <div data-flow="row">
+      <div data-activator="Tab|^Page_Roles_view1^Roles^Page_Roles_view1^">
+        <div id="view1" data-controller="Roles" data-view="grid1" data-show-in-summary="true"> </div>
+      </div>
+      <div id="view2" data-controller="Employee_Roles" data-view="grid1" data-filter-source="view1" data-filter-fields="roles_id" data-auto-hide="self" data-show-modal-forms="true"> </div>
+    </div>
+  </body>
+</html>

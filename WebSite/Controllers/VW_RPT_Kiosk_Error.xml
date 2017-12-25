@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="VW_RPT_Kiosk_Error" conflictDetection="overwriteChanges" label="VW RPT Kiosk Error" plugIn="VSM.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"VW_RPT_Kiosk_Error"."Identity_ID" "Identity_ID"
+	,"VW_RPT_Kiosk_Error"."Kiosk_Code" "Kiosk_Code"
+	,"VW_RPT_Kiosk_Error"."Mac_Address" "Mac_Address"
+	,"VW_RPT_Kiosk_Error"."HD_Serial" "HD_Serial"
+	,"VW_RPT_Kiosk_Error"."IP_Address" "IP_Address"
+	,"VW_RPT_Kiosk_Error"."Location_Address" "Location_Address"
+	,"VW_RPT_Kiosk_Error"."UsageStatus_Name" "UsageStatus_Name"
+	,"VW_RPT_Kiosk_Error"."KioskOwner_ID" "KioskOwner_ID"
+	,"VW_RPT_Kiosk_Error"."KioskOwner_Branch_ID" "KioskOwner_Branch_ID"
+	,"VW_RPT_Kiosk_Error"."CreatedOn" "CreatedOn"
+from "dbo"."VW_RPT_Kiosk_Error" "VW_RPT_Kiosk_Error"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="Identity_ID" type="String" label="^Identity_ID^หมายเลขบัตร^Identity_ID^" length="20" showInSummary="true" />
+    <field name="Kiosk_Code" type="String" label="^Kiosk_Code^รหัสตู้ kiosk^Kiosk_Code^" length="20" showInSummary="true" />
+    <field name="Mac_Address" type="String" label="^Mac_Address^หมายเลข Mac address^Mac_Address^" length="100" showInSummary="true" />
+    <field name="HD_Serial" type="String" label="^HD_Serial^หมายเลขฮาร์ดดิส^HD_Serial^" length="100" showInSummary="true" />
+    <field name="IP_Address" type="String" label="^IP_Address^หมายเลข IP address^IP_Address^" length="30" showInSummary="true" />
+    <field name="Location_Address" type="String" label="^Location_Address^สถานที่ตั้งตู้ Kiosk^Location_Address^" length="500" />
+    <field name="UsageStatus_Name" type="String" label="^Usage_Status_Name^ประเภทผู้ใช้^Usage_Status_Name^" length="50" />
+    <field name="KioskOwner_ID" type="Guid" allowNulls="false" label="Kiosk Owner#" />
+    <field name="KioskOwner_Branch_ID" type="Guid" allowNulls="false" label="Kiosk Owner Branch#" />
+    <field name="CreatedOn" type="DateTime" label="^Created_On^วันที่สร้าง^Created_On^" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="^Controller_KioskError_Report^รายงานปัญหาการใช้งาน^Controller_KioskError_Report^" filter="@Session_SES_emp_id = 'C7D7C340-8328-428B-A10A-F022B708D1B8' or ((KioskOwner_ID = @Session_SES_KioskOwner_ID or @Session_SES_KioskOwner_ID is null or @Session_SES_KioskOwner_ID = '')&#xD;&#xA;and (KioskOwner_Branch_ID = @Session_SES_KioskOwner_Branch_ID or @Session_SES_KioskOwner_Branch_ID is null or @Session_SES_KioskOwner_Branch_ID = ''))">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="KioskOwner_ID" columns="15" hidden="true" />
+        <dataField fieldName="Identity_ID" columns="20" />
+        <dataField fieldName="Kiosk_Code" columns="20" />
+        <dataField fieldName="Mac_Address" />
+        <dataField fieldName="HD_Serial" />
+        <dataField fieldName="IP_Address" columns="30" />
+        <dataField fieldName="Location_Address" />
+        <dataField fieldName="UsageStatus_Name" columns="50" />
+        <dataField fieldName="KioskOwner_Branch_ID" columns="15" hidden="true" />
+        <dataField fieldName="CreatedOn" columns="10" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review VW RPT Kiosk Error">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="VW RPT Kiosk Error" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Identity_ID" columns="20" />
+            <dataField fieldName="Kiosk_Code" columns="20" />
+            <dataField fieldName="Mac_Address" />
+            <dataField fieldName="HD_Serial" />
+            <dataField fieldName="IP_Address" columns="30" />
+            <dataField fieldName="Location_Address" />
+            <dataField fieldName="UsageStatus_Name" columns="50" />
+            <dataField fieldName="KioskOwner_ID" columns="15" />
+            <dataField fieldName="KioskOwner_Branch_ID" columns="15" />
+            <dataField fieldName="CreatedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New VW RPT Kiosk Error">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New VW RPT Kiosk Error" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Identity_ID" columns="20" />
+            <dataField fieldName="Kiosk_Code" columns="20" />
+            <dataField fieldName="Mac_Address" />
+            <dataField fieldName="HD_Serial" />
+            <dataField fieldName="IP_Address" columns="30" />
+            <dataField fieldName="Location_Address" />
+            <dataField fieldName="UsageStatus_Name" columns="50" />
+            <dataField fieldName="KioskOwner_ID" columns="15" />
+            <dataField fieldName="KioskOwner_Branch_ID" columns="15" />
+            <dataField fieldName="CreatedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+      <action id="a9" />
+      <action id="a10" commandName="BatchEdit" commandArgument="editForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

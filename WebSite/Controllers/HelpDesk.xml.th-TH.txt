@@ -1,0 +1,25 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in HelpDesk.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Authen_Password^รหัสผ่าน^Authen_Password^
+
+^Created_By^สร้างโดย^Created_By^
+
+^Created_On^วันที่สร้าง^Created_On^
+
+^FirstName^ชื่อ^FirstName^
+
+^Grid_HelpDesk^ผู้ช่วย^Grid_HelpDesk^
+
+^LastName^นามสกุล^LastName^
+
+^Modified_By^แก้ไขโดย^Modified_By^
+
+^Modified_On^วันที่แก้ไข^Modified_On^
+
+^Personnel_no^รหัสพนักงาน^Personnel_no^
+

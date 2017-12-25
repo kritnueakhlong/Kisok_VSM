@@ -1,0 +1,9 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in RPT_Log_Kiosk.html project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_LogKiosk_Report^รายงานประวัติการใช้งานตู้ Kiosk^Page_LogKiosk_Report^
+

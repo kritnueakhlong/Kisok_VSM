@@ -1,0 +1,70 @@
+<!-- 
+  This file is provided to store the settings for your Data Aquarium project. 
+  You can safely delete this file if no further code generation is planned.
+-->
+<project compatibility="20111118" subscriptionLevel="Unlimited" name="vKiosk_VSM" prettyName="v Kiosk VSM" type="Web Site Factory" codeDomProvider="CSharp" targetFramework="4.5" userInterface="TouchUI" pageImplementation="html" sourceControl="" xmlns="urn:schemas-codeontime-com:data-aquarium-project">
+  <connectionString hostDatabaseSharing="false" sessionStateMode="None">Data Source=KHUADBEER\SQLEXPRESS;Initial Catalog=vKiosk;Persist Security Info=True;User ID=sa;Password=12345;</connectionString>
+  <providerName>System.Data.SqlClient</providerName>
+  <namespace>VSM</namespace>
+  <webServer run="true" port="61749">
+    <webConfig></webConfig>
+  </webServer>
+  <features pageHeader="&lt;span &gt;&lt;/span&gt;" copyright="" annotations="true" annotationsPath="" newColumn="true" floating="false" maxGridFields="10" multiSelect="true" batchEdit="true" advancedSearch="false" advancedLookup="false" relationshipExplorer="false" enablePermalinks="false" enableHistory="false" enableTransactions="false" showModalForms="true" tabViewSelection="0" useSaveAndNew="false">
+    <navigation detectUnderscoreSeparatedSchema="" />
+    <blob allowUploadOnInsert="true" />
+    <framework scriptOnly="true" />
+    <grid actionColumn="false" />
+    <ease urlHashing="true">
+      <auditing>Modified By User Name = ModifiedBy
+Modified On Date          = ModifiedOn
+Created By User Name  = CreatedBy
+Created On Date           = CreatedOn</auditing>
+    </ease>
+    <packageProperties></packageProperties>
+    <touch desktopDisplayDensity="Compact" mobileDisplayDensity="Auto" transitions="" sidebar="Landscape" labelsInForm="AlignedLeft" buttonShapes="true" labelsInList="DisplayedBelow" initialListMode="SeeAll" promoteActions="true" mapApiIdentifier="" menu="toolbar" smartDates="true" />
+    <smtp deliveryMethod="Network" deliveryFormat="" from="" clientDomain="" targetName="" host="" port="" defaultCredentials="true" enableSsl="false" username="" password="" />
+    <cms searchEngine="" analysisEngine="" analysisOnDataPages="false" />
+  </features>
+  <host path="" url="" />
+  <databaseObjectFilter generate="ControllersAndPages"></databaseObjectFilter>
+  <bll discoveryDepth="3" labelFormatExpression="" generate="true" selectMethod="Select" selectSingleMethod="SelectSingle" insertMethod="Insert" updateMethod="Update" deleteMethod="Delete" generateSharedBusinessRules="true" includeViews="true" tabViewSelection="0" normalizeModelNames="true">
+    <fieldMap></fieldMap>
+    <keys></keys>
+    <fieldsToIgnore></fieldsToIgnore>
+    <fieldsToHide></fieldsToHide>
+    <customLabels></customLabels>
+  </bll>
+  <reports enabled="true" version="14" />
+  <membership enabled="false" providerName="System.Data.SqlClient" connectionString="" windowsAuthentication="false" activeDirectory="false" customSecurity="true" dedicatedLogin="true" displayRememberMe="true" rememberMeSet="false" displaySignUp="false" displayPasswordRecovery="false" displayMyAccount="false" displayHelp="true" idleUserDetectionTimeout="15" tabViewSelection="3" validationKey="8561ACADEC26732614EDDDD2E1114DD4F14068803A60EF20A447DEF3B8245765ACC43283CE03301FD93039B53730EFFE054B3B22D1A9D9C73FB1299364AE7948">
+    <adConfig></adConfig>
+    <config>table Users = Employee
+
+column [int|uiid] UserID = emp_id
+
+column [text] UserName = emp_code
+
+column [text] Password = password
+
+column [text] Email = emp_email
+
+
+table Roles = Roles
+
+column [int|uiid] RoleID = roles_id
+
+column [text] RoleName = roles_name
+
+ 
+
+table UserRoles = Employee_Roles
+
+column [int|uiid] UserID = emp_id
+
+column [int|uiid] RoleID = roles_id
+</config>
+  </membership>
+  <globalization uiCulture="th-TH" culture="th-TH" enableClientBasedCulture="false" supportedCultures="th-TH,th-TH; en-US,en-US; " googleTranslateApiKey="" />
+  <layout name="Tabbed" menuStyle="MultiLevel" />
+  <theme name="Modern" />
+  <native windows="false" android="false" ios="false" osx="false" />
+</project>

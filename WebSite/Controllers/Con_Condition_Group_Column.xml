@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Con_Condition_Group_Column" conflictDetection="overwriteChanges" label="Con Condition Group Column" plugIn="VSM.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[select
+	"Con_Condition_Group_Column"."ConGroup_ID" "ConGroup_ID"
+	,"ConGroup_"."ConGroup_Name" "ConGroup_ConGroup_Name"
+	,"Con_Condition_Group_Column"."TableColumn_ID" "TableColumn_ID"
+	,"TableColumn_"."Column_Label" "TableColumn_Column_Label"
+	,"TableColumn_"."Data_Type" "TableColumn_Data_Type"
+	,"Con_Condition_Group_Column"."Value_Type" "Value_Type"
+	,"Con_Condition_Group_Column"."Value_1" "Value_1"
+	,"Con_Condition_Group_Column"."Value_2" "Value_2"
+	,"Con_Condition_Group_Column"."CreatedBy" "CreatedBy"
+	,"Con_Condition_Group_Column"."CreatedOn" "CreatedOn"
+	,"Con_Condition_Group_Column"."ModifiedBy" "ModifiedBy"
+	,"Con_Condition_Group_Column"."ModifiedOn" "ModifiedOn"
+from "dbo"."Con_Condition_Group_Column" "Con_Condition_Group_Column"
+	left join "dbo"."Con_Condition_Group" "ConGroup_" on "Con_Condition_Group_Column"."ConGroup_ID" = "ConGroup_"."ConGroup_ID"
+	left join "dbo"."Con_Table_Column" "TableColumn_" on "Con_Condition_Group_Column"."TableColumn_ID" = "TableColumn_"."TableColumn_ID"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="ConGroup_ID" type="Guid" allowNulls="false" isPrimaryKey="true" label="Con Group#" showInSummary="true">
+      <items style="Lookup" dataController="Con_Condition_Group" newDataView="createForm1" />
+    </field>
+    <field name="ConGroup_ConGroup_Name" type="String" readOnly="true" label="Con Group Name" length="200" />
+    <field name="TableColumn_ID" type="Guid" allowNulls="false" isPrimaryKey="true" label="Table Column#" showInSummary="true">
+      <items style="Lookup" dataController="Con_Table_Column" newDataView="createForm1" />
+    </field>
+    <field name="TableColumn_Column_Label" type="String" readOnly="true" label="Table Column Table Name" length="128" />
+    <field name="TableColumn_Data_Type" type="String" readOnly="true" label="Table Column Table Name" length="128">
+      <formula />
+    </field>
+    <field name="Value_Type" type="String" label="Value Type" length="5" showInSummary="true">
+      <items style="DropDownList">
+        <item value="=" text="เท่ากับ" />
+        <item value="!=" text="ไม่เท่ากับ" />
+        <item value="&gt;=" text="มากกว่าหรือเท่ากับ" />
+        <item value="&lt;=" text="น้อยกว่าหรือเท่ากับ" />
+        <item value="between" text="ระหว่าง" />
+      </items>
+    </field>
+    <field name="Value_1" type="String" label="Value 1" length="128" showInSummary="true" />
+    <field name="Value_2" type="String" label="Value 2" length="128" showInSummary="true" />
+    <field name="CreatedBy" type="String" label="Created By" length="128" />
+    <field name="CreatedOn" type="DateTime" label="Created On" />
+    <field name="ModifiedBy" type="String" label="Modified By" length="128" />
+    <field name="ModifiedOn" type="DateTime" label="Modified On" />
+  </fields>
+  <views>
+    <view id="grid1" type="DataSheet" commandId="command1" label="Con Condition Group Column">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="ConGroup_ID" aliasFieldName="ConGroup_ConGroup_Name" search="Required" />
+        <dataField fieldName="TableColumn_ID" aliasFieldName="TableColumn_Column_Label" />
+        <dataField fieldName="TableColumn_Data_Type" rows="5" />
+        <dataField fieldName="Value_Type" columns="5" />
+        <dataField fieldName="Value_1" />
+        <dataField fieldName="Value_2" />
+        <dataField fieldName="CreatedBy" />
+        <dataField fieldName="CreatedOn" columns="10" />
+        <dataField fieldName="ModifiedBy" />
+        <dataField fieldName="ModifiedOn" columns="10" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Con Condition Group Column">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Con Condition Group Column" newColumn="true">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ConGroup_ID" aliasFieldName="ConGroup_ConGroup_Name" />
+            <dataField fieldName="TableColumn_ID" aliasFieldName="TableColumn_Column_Label" />
+            <dataField fieldName="Value_Type" columns="5" />
+            <dataField fieldName="Value_1" />
+            <dataField fieldName="Value_2" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Con Condition Group Column">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New Con Condition Group Column" newColumn="true">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ConGroup_ID" aliasFieldName="ConGroup_ConGroup_Name" />
+            <dataField fieldName="TableColumn_ID" aliasFieldName="TableColumn_Column_Label" />
+            <dataField fieldName="Value_Type" columns="5" />
+            <dataField fieldName="Value_1" />
+            <dataField fieldName="Value_2" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="Duplicate" commandArgument="createForm1" />
+      <action id="a8" commandName="New" commandArgument="grid1" />
+      <action id="a9" />
+      <action id="a10" commandName="BatchEdit" />
+      <action id="a11" commandName="BatchEdit" commandArgument="editForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a11" whenLastCommandName="BatchEdit" commandName="Update" />
+      <action id="a12" whenLastCommandName="BatchEdit" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.get_hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a8" whenLastCommandName="BatchEdit" commandName="Update" />
+      <action id="a9" whenLastCommandName="BatchEdit" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

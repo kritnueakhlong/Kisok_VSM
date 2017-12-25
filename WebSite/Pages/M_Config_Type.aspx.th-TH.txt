@@ -1,0 +1,13 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in M_Config_Type.aspx project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^M_System_Config^ตั้งค่า^M_System_Config^
+
+^M_System_Config_View^ตั้งค่า^M_System_Config_View^
+
+^Page_M_Config_Type^ประเภทการตั้งค่า^Page_M_Config_Type^
+

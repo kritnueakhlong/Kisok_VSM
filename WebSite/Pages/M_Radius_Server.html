@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>M Radius Server</title>
+    <meta name="description" content="This page allows m radius server management.">
+  </head>
+  <body class="Wide">
+    <div data-flow="row">
+      <div id="view1" data-controller="M_Radius_Server" data-view="grid1" data-show-in-summary="true"> </div>
+    </div>
+    <div data-flow="row" style="padding-top:8px">
+      <div data-activator="Tab|M Radius Server Interface">
+        <div id="view3" data-controller="M_Radius_Server_Interface" data-view="grid1" data-show-in-summary="true" data-filter-source="view1" data-filter-fields="RadiusServer_Code" data-selection-mode="multiple"> </div>
+      </div>
+      <div data-activator="Tab|M Ssid">
+        <div id="view2" data-controller="M_SSID" data-view="grid1" data-filter-source="view1" data-filter-fields="RadiusServer_Code" data-page-size="5" data-auto-hide="self" data-show-modal-forms="true"> </div>
+      </div>
+    </div>
+  </body>
+</html>

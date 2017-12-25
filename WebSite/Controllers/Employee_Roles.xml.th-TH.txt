@@ -1,0 +1,17 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in Employee_Roles.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Employee_Roles_View^กลุ่มผู้ใช้^Employee_Roles_View^
+
+^Page_User_view2^กลุ่มผู้ใช้^Page_User_view2^
+
+^Page_User_view2_grid^กลุ่มผู้ใช้^Page_User_view2_grid^
+
+^Roles_Name^ชื่อกลุ่มผู้ใช้^Roles_Name^
+
+^User_New_Employee_Roles^สร้างกลุ่มผู้ใช้^User_New_Employee_Roles^
+

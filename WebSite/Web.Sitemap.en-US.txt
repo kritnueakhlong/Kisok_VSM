@@ -1,0 +1,57 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in Web.Sitemap project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^HomeDesc^Application home page^HomeDesc^
+
+^HomePath^Home^HomePath^
+
+^MembershipDesc^User and role manager^MembershipDesc^
+
+^MembershipPath^Membership^MembershipPath^
+
+^ReportsPath^Reports^ReportsPath^
+
+^Site_Customer_Blacklist^Blacklist account^Site_Customer_Blacklist^
+
+^Site_EditUser^Edit User^Site_EditUser^
+
+^Site_HelpDesk^Help Desk^Site_HelpDesk^
+
+^Site_Home^Home^Site_Home^
+
+^Site_Kiosk^Kiosk^Site_Kiosk^
+
+^Site_Kiosk_Monitor^Kiosk Monitor^Site_Kiosk_Monitor^
+
+^Site_Kiosk_Monitoring^Monitoring^Site_Kiosk_Monitoring^
+
+^Site_KioskError_Report^Kiosk Error Report^Site_KioskError_Report^
+
+^Site_KioskUsage_Report^Kiosk Usage Report^Site_KioskUsage_Report^
+
+^Site_LogKiosk_Report^Log Kiosk Report^Site_LogKiosk_Report^
+
+^Site_M_Config_Type^Config Type^Site_M_Config_Type^
+
+^Site_M_System_Config^Setting^Site_M_System_Config^
+
+^Site_Manage_HelpDesk^Manage Help Desk^Site_Manage_HelpDesk^
+
+^Site_ManageKiosk^Manage Kiosk^Site_ManageKiosk^
+
+^Site_Member^User^Site_Member^
+
+^Site_OldCust_Report^Old Customer Register Report^Site_OldCust_Report^
+
+^Site_Register_Report^Register Report^Site_Register_Report^
+
+^Site_Roles^Roles^Site_Roles^
+
+^Site_User^Manage User^Site_User^
+
+^SiteHome^Home^SiteHome^
+

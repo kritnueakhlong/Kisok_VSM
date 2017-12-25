@@ -1,0 +1,21 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in M_Config_Type.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Config_Type_Code^รหัสประเภท^Config_Type_Code^
+
+^Config_Type_Name^ชื่อประเภท^Config_Type_Name^
+
+^Controller_M_Config_Type^ประเภทการตั้งค่า^Controller_M_Config_Type^
+
+^Created_By^สร้างโดย^Created_By^
+
+^Created_On^วันที่สร้าง^Created_On^
+
+^Modified_By^แก้ไขโดย^Modified_By^
+
+^Modified_On^วันที่แก้ไข^Modified_On^
+

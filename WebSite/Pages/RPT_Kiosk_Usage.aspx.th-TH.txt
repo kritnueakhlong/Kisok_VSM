@@ -1,0 +1,11 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in RPT_Kiosk_Usage.aspx project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_KioskUsage_Detail_Report^รายงานรายละเอียดการใช้งาน kiosk ตามจุดต่าง^Page_KioskUsage_Detail_Report^
+
+^Page_KioskUsage_Report^รายงานการใช้งาน kiosk ตามจุดต่างๆ^Page_KioskUsage_Report^
+

@@ -1,0 +1,33 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in VW_RPT_OldCustomer_Detail.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Authen_User^User Name^Authen_User^
+
+^Birth_Date^Birth Date^Birth_Date^
+
+^Controller_Old_Cust_Detail_Report^Old Customer Register Detail Report^Controller_Old_Cust_Detail_Report^
+
+^Created_On^Created On^Created_On^
+
+^Iden_Doc_Code^Card Type^Iden_Doc_Code^
+
+^Identity_ID^Card ID^Identity_ID^
+
+^Kiosk_Code^Kiosk Code^Kiosk_Code^
+
+^Location_Address^Location Address^Location_Address^
+
+^Log_Address^Address^Log_Address^
+
+^Name_th^Name^Name_th^
+
+^Phone_No^Phone No^Phone_No^
+
+^Sex^Sex^Sex^
+
+^Usage_Status_Name^Usage Status Name^Usage_Status_Name^
+

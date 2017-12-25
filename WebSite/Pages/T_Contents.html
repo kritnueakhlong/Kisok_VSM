@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>T Contents</title>
+    <meta name="description" content="This page allows t contents management.">
+  </head>
+  <body>
+    <div data-flow="row">
+      <div id="view1" data-controller="T_Contents" data-view="grid1" data-show-in-summary="true"> </div>
+    </div>
+    <div data-flow="row" style="padding-top:8px">
+      <div data-activator="Tab|T Contents Kiosk">
+        <div id="view2" data-controller="T_Contents_Kiosk" data-view="grid1" data-filter-source="view1" data-filter-fields="Content_ID" data-page-size="5" data-auto-hide="container" data-show-modal-forms="true"> </div>
+      </div>
+      <div data-activator="Tab|T Contents Kiosk Group">
+        <div id="view3" data-controller="T_Contents_KioskGroup" data-view="grid1" data-filter-source="view1" data-filter-fields="Content_ID" data-page-size="5" data-auto-hide="container" data-show-modal-forms="true"> </div>
+      </div>
+    </div>
+  </body>
+</html>

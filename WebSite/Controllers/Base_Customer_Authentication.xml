@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Base_Customer_Authentication" conflictDetection="overwriteChanges" label="Base Customer Authentication" plugIn="VSM.Data.AnnotationPlugIn" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Base_Customer_Authentication"."Customer_ID" "Customer_ID"
+	,"Customer_"."IdenDoc_Code" "Customer_IdenDoc_Code"
+	,"Customer_Country_"."Country_Name_Locale" "Customer_Country_Country_Name_Locale"
+	,"Customer_GenBy_"."GenBy_Name" "Customer_GenBy_GenBy_Name"
+	,"Customer_IdenDoc_"."IdenDoc_Name" "Customer_IdenDoc_IdenDoc_Name"
+	,"Customer_KioskOwner_"."KioskOwner_Code" "Customer_KioskOwner_KioskOwner_Code"
+	,"Customer_KioskOwner_Branch_"."KioskOwner_Branch_Code" "Customer_KioskOwner_Branch_KioskOwner_Branch_Code"
+	,"Base_Customer_Authentication"."Authen_User" "Authen_User"
+	,"Base_Customer_Authentication"."Authen_Password" "Authen_Password"
+	,"Base_Customer_Authentication"."Authen_ExpireDate" "Authen_ExpireDate"
+	,"Base_Customer_Authentication"."Authen_Refer_ID" "Authen_Refer_ID"
+	,"Base_Customer_Authentication"."Item_Flag" "Item_Flag"
+	,"Base_Customer_Authentication"."CreatedBy" "CreatedBy"
+	,"Base_Customer_Authentication"."CreatedOn" "CreatedOn"
+	,"Base_Customer_Authentication"."ModifiedBy" "ModifiedBy"
+	,"Base_Customer_Authentication"."ModifiedOn" "ModifiedOn"
+from "dbo"."Base_Customer_Authentication" "Base_Customer_Authentication"
+	left join "dbo"."Base_Customer" "Customer_" on "Base_Customer_Authentication"."Customer_ID" = "Customer_"."Customer_ID"
+	left join "dbo"."M_Country" "Customer_Country_" on "Customer_"."Country_Code" = "Customer_Country_"."Country_Code"
+	left join "dbo"."M_Generate_By" "Customer_GenBy_" on "Customer_"."GenBy_Code" = "Customer_GenBy_"."GenBy_Code"
+	left join "dbo"."M_IDentify_Document" "Customer_IdenDoc_" on "Customer_"."IdenDoc_Code" = "Customer_IdenDoc_"."IdenDoc_Code"
+	left join "dbo"."M_Kiosk_Owner" "Customer_KioskOwner_" on "Customer_"."KioskOwner_ID" = "Customer_KioskOwner_"."KioskOwner_ID"
+	left join "dbo"."M_Kiosk_Owner_Branch" "Customer_KioskOwner_Branch_" on "Customer_"."KioskOwner_Branch_ID" = "Customer_KioskOwner_Branch_"."KioskOwner_Branch_ID"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="Customer_ID" type="Guid" allowNulls="false" isPrimaryKey="true" label="Customer#" showInSummary="true">
+      <items style="Lookup" dataController="Base_Customer" newDataView="createForm1" dataValueField="Customer_ID" dataTextField="KioskOwner_ID" />
+    </field>
+    <field name="Customer_IdenDoc_Code" type="String" readOnly="true" label="Customer Iden Doc Code" length="1">
+      <items style="Lookup" dataController="M_IDentify_Document" newDataView="createForm1" dataValueField="IdenDoc_Code" dataTextField="IdenDoc_Name" />
+    </field>
+    <field name="Customer_Country_Country_Name_Locale" type="String" readOnly="true" label="Customer Country Name Locale" length="50" />
+    <field name="Customer_GenBy_GenBy_Name" type="String" readOnly="true" label="Customer Gen By Name" length="50" />
+    <field name="Customer_IdenDoc_IdenDoc_Name" type="String" readOnly="true" label="Customer Iden Doc Name" length="50" />
+    <field name="Customer_KioskOwner_KioskOwner_Code" type="String" readOnly="true" label="Customer Kiosk Owner Code" length="10" />
+    <field name="Customer_KioskOwner_Branch_KioskOwner_Branch_Code" type="String" readOnly="true" label="Customer Kiosk Owner Branch Code" length="10" />
+    <field name="Authen_User" type="String" allowNulls="false" isPrimaryKey="true" label="Authen User" length="30" showInSummary="true" />
+    <field name="Authen_Password" type="String" allowNulls="false" label="Authen Password" length="30" />
+    <field name="Authen_ExpireDate" type="DateTime" label="Authen Expire Date" showInSummary="true" />
+    <field name="Authen_Refer_ID" type="String" label="Authen Refer#" length="30" showInSummary="true" />
+    <field name="Item_Flag" type="Boolean" default="((1))" label="Item Flag" showInSummary="true" />
+    <field name="CreatedBy" type="String" label="Created By" length="128" />
+    <field name="CreatedOn" type="DateTime" label="Created On" />
+    <field name="ModifiedBy" type="String" label="Modified By" length="128" />
+    <field name="ModifiedOn" type="DateTime" label="Modified On" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Base Customer Authentication">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Customer_ID" aliasFieldName="Customer_IdenDoc_Code" />
+        <dataField fieldName="Authen_User" columns="30" />
+        <dataField fieldName="Authen_ExpireDate" columns="10" />
+        <dataField fieldName="Authen_Refer_ID" columns="30" />
+        <dataField fieldName="Item_Flag" />
+        <dataField fieldName="CreatedBy" />
+        <dataField fieldName="CreatedOn" columns="10" />
+        <dataField fieldName="ModifiedBy" />
+        <dataField fieldName="ModifiedOn" columns="10" />
+        <dataField fieldName="Customer_Country_Country_Name_Locale" columns="50" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Base Customer Authentication">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Base Customer Authentication" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Customer_ID" aliasFieldName="Customer_IdenDoc_Code" />
+            <dataField fieldName="Authen_User" columns="30" />
+            <dataField fieldName="Authen_Password" columns="30" />
+            <dataField fieldName="Authen_ExpireDate" columns="10" />
+            <dataField fieldName="Authen_Refer_ID" columns="30" />
+            <dataField fieldName="Item_Flag" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+        <category id="c2" headerText="Reference Information">
+          <description><![CDATA[$DefaultReferenceDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Customer_Country_Country_Name_Locale" columns="50" />
+            <dataField fieldName="Customer_GenBy_GenBy_Name" columns="50" />
+            <dataField fieldName="Customer_IdenDoc_IdenDoc_Name" columns="50" />
+            <dataField fieldName="Customer_KioskOwner_KioskOwner_Code" columns="10" />
+            <dataField fieldName="Customer_KioskOwner_Branch_KioskOwner_Branch_Code" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Base Customer Authentication">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New Base Customer Authentication" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Customer_ID" aliasFieldName="Customer_IdenDoc_Code" />
+            <dataField fieldName="Authen_User" columns="30" />
+            <dataField fieldName="Authen_Password" columns="30" />
+            <dataField fieldName="Authen_ExpireDate" columns="10" />
+            <dataField fieldName="Authen_Refer_ID" columns="30" />
+            <dataField fieldName="Item_Flag" />
+            <dataField fieldName="CreatedBy" />
+            <dataField fieldName="CreatedOn" columns="10" />
+            <dataField fieldName="ModifiedBy" />
+            <dataField fieldName="ModifiedOn" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+      <action id="a9" />
+      <action id="a10" commandName="BatchEdit" commandArgument="editForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

@@ -1,0 +1,9 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in Customer_Blacklist.html project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_Customer_Blacklist^รายการห้ามผู้ใช้งาน^Page_Customer_Blacklist^
+

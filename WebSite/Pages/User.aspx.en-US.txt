@@ -1,0 +1,15 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in User.aspx project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Page_User^Manage User^Page_User^
+
+^Page_User_view1^User^Page_User_view1^
+
+^Page_User_view2^User Roles^Page_User_view2^
+
+^Page_User_view22^User Roles^Page_User_view22^
+

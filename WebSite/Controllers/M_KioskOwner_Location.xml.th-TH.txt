@@ -1,0 +1,23 @@
+*******************************************************************************
+Your application uses this file to locate resource strings defined
+in M_KioskOwner_Location.xml project item. 
+
+Replace the text between localization brackets as needed.
+*******************************************************************************
+
+^Created_By^สร้างโดย^Created_By^
+
+^Created_On^วันที่สร้าง^Created_On^
+
+^Kiosk_Owner^รหัสเจ้าของตู้ kiosk^Kiosk_Owner^
+
+^Location_Address^สถานที่ตั้งตู้ Kiosk^Location_Address^
+
+^Location_LAT^ละติจูด^Location_LAT^
+
+^Location_LONG^ลองติจูด^Location_LONG^
+
+^Modified_By^แก้ไขโดย^Modified_By^
+
+^Modified_On^วันที่แก้ไข^Modified_On^
+
